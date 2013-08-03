@@ -1,0 +1,12 @@
+﻿<Window x:Class="GurpsCharacterEditor.Views.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:p="clr-namespace:GurpsCharacterEditor.Properties"
+        Title="AboutWindow"
+        SizeToContent="WidthAndHeight">
+    <StackPanel>
+        <TextBlock Margin="8">GURPS Character Editor is copyright © Claus Jensby Madsen 2013</TextBlock>
+        <TextBlock Margin="8">GURPS is registered trademark of Steve Jackson Games Incorporated.</TextBlock>
+        <Button Margin="8" Content="{x:Static p:Resources.AboutWindowClose}" Click="CloseButtonClick" />
+    </StackPanel>
+</Window>
