@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\Item.cs" />
+    <Compile Include="ViewModels\AboutViewModel.cs" />
     <Compile Include="ViewModels\DelegateCommand.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />

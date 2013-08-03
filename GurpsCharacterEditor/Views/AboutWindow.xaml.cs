@@ -7,6 +7,7 @@ namespace GurpsCharacterEditor.Views
     {
         public AboutWindow()
         {
+            DataContext = new AboutViewModel();
             InitializeComponent();
         }
 
