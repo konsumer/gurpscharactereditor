@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using GurpsCharacterEditor.Models;
 using GurpsCharacterEditor.Views;
+using System.Diagnostics;
 
 namespace GurpsCharacterEditor.ViewModels
 {
@@ -16,9 +17,27 @@ namespace GurpsCharacterEditor.ViewModels
         public MainViewModel(Character character)
         {
             Character = character;
+            Character.StrengthPoints = 12;
 
             // Create commands
             AboutCommand = new DelegateCommand(ShowAboutWindow);
+            EditPrimaryStatsCommand = new DelegateCommand(EditPrimaryStats);
+
+            // Setup property dependencies
+            PropertyDependencyMap.Add("Strength", new[] { "MaxHP", "BasicLift" });
+            PropertyDependencyMap.Add("StrengthPoints", new[] { "Strength" });
+            PropertyDependencyMap.Add("Dexterity", new[] { "BasicSpeed" });
+            PropertyDependencyMap.Add("DexterityPoints", new[] { "Dexterity" });
+            PropertyDependencyMap.Add("Intelligence", new[] { "Willpower", "Perception" });
+            PropertyDependencyMap.Add("IntelligencePoints", new[] { "Intelligence" });
+            PropertyDependencyMap.Add("Health", new[] { "MaxFP", "BasicSpeed" });
+            PropertyDependencyMap.Add("HealthPoints", new[] { "Health" });
+            PropertyDependencyMap.Add("MaxHPPoints", new[] { "MaxHP" });
+            PropertyDependencyMap.Add("MaxFPPoints", new[] { "MaxFP" });
+            PropertyDependencyMap.Add("WillpowerPoints", new[] { "Willpower" });
+            PropertyDependencyMap.Add("PerceptionPoints", new[] { "Perception" });
+            PropertyDependencyMap.Add("BasicSpeed", new[] { "BasicMove" });
+            PropertyDependencyMap.Add("BasicMovePoints", new[] { "BasicMove" });
         }
 
         public string Name
@@ -133,12 +152,25 @@ namespace GurpsCharacterEditor.ViewModels
         }
 
         public DelegateCommand AboutCommand { get; private set; }
+        public DelegateCommand EditPrimaryStatsCommand { get; private set; }
 
-        // Show the about window
         public void ShowAboutWindow(object parameter)
         {
             AboutWindow window = new AboutWindow();
             window.ShowDialog();
+        }
+
+        public void EditPrimaryStats(object parameter)
+        {
+            EditPrimaryStatsWindow window = new EditPrimaryStatsWindow();
+            window.DataContext = new EditPrimaryStatsViewModel(Character);
+
+            window.ShowDialog();
+
+            NotifyPropertyChanged("StrengthPoints");
+            NotifyPropertyChanged("DexterityPoints");
+            NotifyPropertyChanged("IntelligencePoints");
+            NotifyPropertyChanged("HealthPoints");
         }
     }
 }

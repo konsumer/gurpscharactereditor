@@ -165,8 +165,20 @@
   <data name="MenuAbout" xml:space="preserve">
     <value>Om...</value>
   </data>
+  <data name="MenuEdit" xml:space="preserve">
+    <value>Rediger</value>
+  </data>
+  <data name="MenuEditPrimaryStats" xml:space="preserve">
+    <value>Rediger primære statistikker...</value>
+  </data>
   <data name="MenuHelp" xml:space="preserve">
     <value>Hjælp</value>
+  </data>
+  <data name="PrimaryStatsWindow" xml:space="preserve">
+    <value>Rediger primære statistikker</value>
+  </data>
+  <data name="PrimaryStatsWindowOk" xml:space="preserve">
+    <value>OK</value>
   </data>
   <data name="UnnamedCharacter" xml:space="preserve">
     <value>(unavngivet karakter)</value>

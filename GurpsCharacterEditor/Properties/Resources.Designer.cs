@@ -205,11 +205,47 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string MenuEdit {
+            get {
+                return ResourceManager.GetString("MenuEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit primary stats....
+        /// </summary>
+        public static string MenuEditPrimaryStats {
+            get {
+                return ResourceManager.GetString("MenuEditPrimaryStats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Help.
         /// </summary>
         public static string MenuHelp {
             get {
                 return ResourceManager.GetString("MenuHelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit primary stats.
+        /// </summary>
+        public static string PrimaryStatsWindow {
+            get {
+                return ResourceManager.GetString("PrimaryStatsWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string PrimaryStatsWindowOk {
+            get {
+                return ResourceManager.GetString("PrimaryStatsWindowOk", resourceCulture);
             }
         }
         

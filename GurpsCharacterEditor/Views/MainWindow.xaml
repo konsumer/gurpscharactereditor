@@ -12,6 +12,9 @@
     </Window.Resources>
     <DockPanel>
         <Menu DockPanel.Dock="Top">
+            <MenuItem Header="{x:Static p:Resources.MenuEdit}">
+                <MenuItem Header="{x:Static p:Resources.MenuEditPrimaryStats}" Command="{Binding EditPrimaryStatsCommand}"/>
+            </MenuItem>
             <MenuItem Header="{x:Static p:Resources.MenuHelp}">
                 <MenuItem Header="{x:Static p:Resources.MenuAbout}" Command="{Binding AboutCommand}"/>
             </MenuItem>
