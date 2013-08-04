@@ -3,26 +3,33 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:p="clr-namespace:GurpsCharacterEditor.Properties"
         Title="{x:Static p:Resources.PrimaryStatsWindow}"
-        SizeToContent="WidthAndHeight">
-    <StackPanel Orientation="Vertical">
-        <StackPanel Orientation="Horizontal" Margin="8">
-            <StackPanel Orientation="Vertical">
-                <TextBlock Text="{Binding Path=StrengthPoints}"/>
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterOwner">
+    <StackPanel Orientation="Vertical" Grid.IsSharedSizeScope="True">
+        <Grid Margin="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="Field"/>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="Field"/>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="Field"/>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="Field"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical" Grid.Column="0">
+                <TextBlock Text="{x:Static p:Resources.CharacterSheetStrength}"/>
                 <TextBox Text="{Binding Path=StrengthPoints, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
-            <StackPanel Orientation="Vertical" Margin="8 0 0 0">
+            <StackPanel Orientation="Vertical" Margin="8 0 0 0" Grid.Column="1">
                 <TextBlock Text="{x:Static p:Resources.CharacterSheetDexterity}"/>
                 <TextBox Text="{Binding Path=DexterityPoints, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
-            <StackPanel Orientation="Vertical" Margin="8 0 0 0">
+            <StackPanel Orientation="Vertical" Margin="8 0 0 0" Grid.Column="2">
                 <TextBlock Text="{x:Static p:Resources.CharacterSheetIntelligence}"/>
                 <TextBox Text="{Binding Path=IntelligencePoints, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
-            <StackPanel Orientation="Vertical" Margin="8 0 0 0">
+            <StackPanel Orientation="Vertical" Margin="8 0 0 0" Grid.Column="3">
                 <TextBlock Text="{x:Static p:Resources.CharacterSheetHealth}"/>
                 <TextBox Text="{Binding Path=HealthPoints, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
-        </StackPanel>
+        </Grid>
         <StackPanel Margin=" 8 0 8 8">
             <Button Content="{x:Static p:Resources.PrimaryStatsWindowOk}"/>
         </StackPanel>

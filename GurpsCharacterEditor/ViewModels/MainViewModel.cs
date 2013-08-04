@@ -17,7 +17,6 @@ namespace GurpsCharacterEditor.ViewModels
         public MainViewModel(Character character)
         {
             Character = character;
-            Character.StrengthPoints = 12;
 
             // Create commands
             AboutCommand = new DelegateCommand(ShowAboutWindow);

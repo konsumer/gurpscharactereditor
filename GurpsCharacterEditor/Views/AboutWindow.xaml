@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:p="clr-namespace:GurpsCharacterEditor.Properties"
         Title="{x:Static p:Resources.AboutWindow}"
-        SizeToContent="WidthAndHeight">
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterOwner">
     <StackPanel>
         <TextBlock Margin="8" Text="{Binding Path=Copyright}"/>
         <TextBlock Margin="8">GURPS is registered trademark of Steve Jackson Games Incorporated.</TextBlock>
