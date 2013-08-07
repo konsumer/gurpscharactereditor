@@ -10,5 +10,10 @@ namespace GurpsCharacterEditor.Views
             DataContext = new EditPrimaryStatsViewModel();
             InitializeComponent();
         }
+
+        private void OkButtonClick(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
