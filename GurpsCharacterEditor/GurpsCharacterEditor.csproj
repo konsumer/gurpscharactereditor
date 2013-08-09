@@ -63,6 +63,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\EditSecondaryStatsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -76,6 +80,7 @@
     <Compile Include="ViewModels\AboutViewModel.cs" />
     <Compile Include="ViewModels\DelegateCommand.cs" />
     <Compile Include="ViewModels\EditPrimaryStatsViewModel.cs" />
+    <Compile Include="ViewModels\EditSecondaryStatsViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\AboutWindow.xaml.cs">
@@ -83,6 +88,9 @@
     </Compile>
     <Compile Include="Views\EditPrimaryStatsWindow.xaml.cs">
       <DependentUpon>EditPrimaryStatsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditSecondaryStatsWindow.xaml.cs">
+      <DependentUpon>EditSecondaryStatsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

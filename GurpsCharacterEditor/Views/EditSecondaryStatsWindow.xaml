@@ -1,0 +1,47 @@
+﻿<Window x:Class="GurpsCharacterEditor.Views.EditSecondaryStatsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:p="clr-namespace:GurpsCharacterEditor.Properties"
+        Title="{x:Static p:Resources.SecondaryStatsWindow}"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterOwner">
+    <StackPanel Orientation="Vertical" Grid.IsSharedSizeScope="True">
+        <Grid Margin="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="Field"/>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="Field"/>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="Field"/>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="Field"/>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="Field"/>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="Field"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical" Grid.Column="0">
+                <TextBlock Text="{x:Static p:Resources.CharacterSheetMaxHP}"/>
+                <TextBox Text="{Binding Path=MaxHPPoints, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="8 0 0 0" Grid.Column="1">
+                <TextBlock Text="{x:Static p:Resources.CharacterSheetMaxFP}"/>
+                <TextBox Text="{Binding Path=MaxFPPoints, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="8 0 0 0" Grid.Column="2">
+                <TextBlock Text="{x:Static p:Resources.CharacterSheetWillpower}"/>
+                <TextBox Text="{Binding Path=WillpowerPoints, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="8 0 0 0" Grid.Column="3">
+                <TextBlock Text="{x:Static p:Resources.CharacterSheetPerception}"/>
+                <TextBox Text="{Binding Path=PerceptionPoints, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="8 0 0 0" Grid.Column="4">
+                <TextBlock Text="{x:Static p:Resources.CharacterSheetBasicSpeed}"/>
+                <TextBox Text="{Binding Path=BasicSpeedPoints, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="8 0 0 0" Grid.Column="5">
+                <TextBlock Text="{x:Static p:Resources.CharacterSheetBasicMove}"/>
+                <TextBox Text="{Binding Path=BasicMovePoints, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+        </Grid>
+        <StackPanel Margin=" 8 0 8 8">
+            <Button Content="{x:Static p:Resources.SecondaryStatsWindowOk}" Click="Button_Click" />
+        </StackPanel>
+    </StackPanel>
+</Window>

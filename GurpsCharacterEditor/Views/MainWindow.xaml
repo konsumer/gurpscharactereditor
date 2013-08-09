@@ -14,6 +14,7 @@
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="{x:Static p:Resources.MenuEdit}">
                 <MenuItem Header="{x:Static p:Resources.MenuEditPrimaryStats}" Command="{Binding EditPrimaryStatsCommand}"/>
+                <MenuItem Header="{x:Static p:Resources.MenuEditSecondaryStats}" Command="{Binding EditSecondaryStatsCommand}"/>
             </MenuItem>
             <MenuItem Header="{x:Static p:Resources.MenuHelp}">
                 <MenuItem Header="{x:Static p:Resources.MenuAbout}" Command="{Binding AboutCommand}"/>

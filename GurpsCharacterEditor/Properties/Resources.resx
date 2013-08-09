@@ -147,6 +147,12 @@
   <data name="CharacterSheetInventory" xml:space="preserve">
     <value>Inventory:</value>
   </data>
+  <data name="CharacterSheetMaxFP" xml:space="preserve">
+    <value>Max FP:</value>
+  </data>
+  <data name="CharacterSheetMaxHP" xml:space="preserve">
+    <value>Max HP:</value>
+  </data>
   <data name="CharacterSheetNoPicture" xml:space="preserve">
     <value>No picture</value>
   </data>
@@ -171,6 +177,9 @@
   <data name="MenuEditPrimaryStats" xml:space="preserve">
     <value>Edit primary stats...</value>
   </data>
+  <data name="MenuEditSecondaryStats" xml:space="preserve">
+    <value>Edit secondary stats</value>
+  </data>
   <data name="MenuHelp" xml:space="preserve">
     <value>Help</value>
   </data>
@@ -178,6 +187,12 @@
     <value>Edit primary stats</value>
   </data>
   <data name="PrimaryStatsWindowOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SecondaryStatsWindow" xml:space="preserve">
+    <value>Edit secondary stats</value>
+  </data>
+  <data name="SecondaryStatsWindowOk" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="UnnamedCharacter" xml:space="preserve">

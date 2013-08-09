@@ -9,6 +9,10 @@ namespace GurpsCharacterEditor.ViewModels
     {
         public Character Character { get; set; }
 
+        public DelegateCommand AboutCommand { get; private set; }
+        public DelegateCommand EditPrimaryStatsCommand { get; private set; }
+        public DelegateCommand EditSecondaryStatsCommand { get; private set; }
+
         public MainViewModel()
             : this(new Character())
         {
@@ -21,6 +25,7 @@ namespace GurpsCharacterEditor.ViewModels
             // Create commands
             AboutCommand = new DelegateCommand(ShowAboutWindow);
             EditPrimaryStatsCommand = new DelegateCommand(EditPrimaryStats);
+            EditSecondaryStatsCommand = new DelegateCommand(EditSecondaryStats);
 
             // Setup property dependencies
             PropertyDependencyMap.Add("Strength", new[] { "MaxHP", "BasicLift" });
@@ -36,6 +41,7 @@ namespace GurpsCharacterEditor.ViewModels
             PropertyDependencyMap.Add("WillpowerPoints", new[] { "Willpower" });
             PropertyDependencyMap.Add("PerceptionPoints", new[] { "Perception" });
             PropertyDependencyMap.Add("BasicSpeed", new[] { "BasicMove" });
+            PropertyDependencyMap.Add("BasicSpeedPoints", new[] { "BasicSpeed" });
             PropertyDependencyMap.Add("BasicMovePoints", new[] { "BasicMove" });
         }
 
@@ -150,9 +156,6 @@ namespace GurpsCharacterEditor.ViewModels
             }
         }
 
-        public DelegateCommand AboutCommand { get; private set; }
-        public DelegateCommand EditPrimaryStatsCommand { get; private set; }
-
         public void ShowAboutWindow(object parameter)
         {
             AboutWindow window = new AboutWindow();
@@ -170,6 +173,21 @@ namespace GurpsCharacterEditor.ViewModels
             NotifyPropertyChanged("DexterityPoints");
             NotifyPropertyChanged("IntelligencePoints");
             NotifyPropertyChanged("HealthPoints");
+        }
+
+        public void EditSecondaryStats(object parameter)
+        {
+            EditSecondaryStatsWindow window = new EditSecondaryStatsWindow();
+            window.DataContext = new EditSecondaryStatsViewModel(Character);
+
+            window.ShowDialog();
+
+            NotifyPropertyChanged("MaxHPPoints");
+            NotifyPropertyChanged("MaxFPPoints");
+            NotifyPropertyChanged("WillpowerPoints");
+            NotifyPropertyChanged("PerceptionPoints");
+            NotifyPropertyChanged("BasicSpeedPoints");
+            NotifyPropertyChanged("BasicMovePoints");
         }
     }
 }

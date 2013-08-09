@@ -151,6 +151,24 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Max FP:.
+        /// </summary>
+        public static string CharacterSheetMaxFP {
+            get {
+                return ResourceManager.GetString("CharacterSheetMaxFP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Max HP:.
+        /// </summary>
+        public static string CharacterSheetMaxHP {
+            get {
+                return ResourceManager.GetString("CharacterSheetMaxHP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No picture.
         /// </summary>
         public static string CharacterSheetNoPicture {
@@ -223,6 +241,15 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit secondary stats.
+        /// </summary>
+        public static string MenuEditSecondaryStats {
+            get {
+                return ResourceManager.GetString("MenuEditSecondaryStats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Help.
         /// </summary>
         public static string MenuHelp {
@@ -246,6 +273,24 @@ namespace GurpsCharacterEditor.Properties {
         public static string PrimaryStatsWindowOk {
             get {
                 return ResourceManager.GetString("PrimaryStatsWindowOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit secondary stats.
+        /// </summary>
+        public static string SecondaryStatsWindow {
+            get {
+                return ResourceManager.GetString("SecondaryStatsWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string SecondaryStatsWindowOk {
+            get {
+                return ResourceManager.GetString("SecondaryStatsWindowOk", resourceCulture);
             }
         }
         
