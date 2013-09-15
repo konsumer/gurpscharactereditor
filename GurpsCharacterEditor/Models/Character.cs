@@ -3,11 +3,17 @@ using System.Collections.ObjectModel;
 
 namespace GurpsCharacterEditor.Models
 {
-    // This class represents a GURPS character
+    // This class represents a GURPS character.
     public class Character
     {
         public string Name { get; set; }
 
+        // The Points properties contains the number of points to be
+        // added/subtracted from the base value of the stat, thus acting
+        // as a modifier.
+        //
+        // For example the base value of Strength is 10. If StrengthPoints
+        // is 3, then the effective Strength is 13.
         public int StrengthPoints { get; set; }
         public int DexterityPoints { get; set; }
         public int IntelligencePoints { get; set; }
@@ -19,6 +25,7 @@ namespace GurpsCharacterEditor.Models
         public float BasicSpeedPoints { get; set; }
         public int BasicMovePoints { get; set; }
 
+        // These read-only properties returns the effective value of the stats.
         public int Strength
         {
             get
@@ -102,6 +109,7 @@ namespace GurpsCharacterEditor.Models
             }
         }
 
+        // Inventory of the character.
         private ObservableCollection<Item> inventory = new ObservableCollection<Item>();
         public ObservableCollection<Item> Inventory
         {
@@ -110,7 +118,6 @@ namespace GurpsCharacterEditor.Models
                 return inventory;
             }
         }
-
         public int TotalWeight
         {
             get
@@ -125,7 +132,6 @@ namespace GurpsCharacterEditor.Models
         public Character()
         {
         }
-
         public override string ToString()
         {
             return Name;

@@ -1,6 +1,7 @@
 ﻿namespace GurpsCharacterEditor.Models
 {
-    // This item represents an inventory item, which can be carried by a character
+    // This item represents an inventory item, which can be carried by a
+    // character.
     public class Item
     {
         public string Name { get; set; }
