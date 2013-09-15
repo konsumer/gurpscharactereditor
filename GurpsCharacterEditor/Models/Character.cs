@@ -23,28 +23,28 @@ namespace GurpsCharacterEditor.Models
         {
             get
             {
-                return StrengthPoints;
+                return 10 + StrengthPoints;
             }
         }
         public int Dexterity
         {
             get
             {
-                return DexterityPoints;
+                return 10 + DexterityPoints;
             }
         }
         public int Intelligence
         {
             get
             {
-                return IntelligencePoints;
+                return 10 + IntelligencePoints;
             }
         }
         public int Health
         {
             get
             {
-                return HealthPoints;
+                return 10 + HealthPoints;
             }
         }
         public int MaxHP
@@ -124,10 +124,6 @@ namespace GurpsCharacterEditor.Models
 
         public Character()
         {
-            StrengthPoints = 10;
-            DexterityPoints = 10;
-            IntelligencePoints = 10;
-            HealthPoints = 10;
         }
 
         public override string ToString()

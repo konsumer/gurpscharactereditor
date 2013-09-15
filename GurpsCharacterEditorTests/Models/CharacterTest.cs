@@ -10,7 +10,7 @@ namespace GurpsEditorTests.Models
         public void CharacterMaxHP()
         {
             Character target = new Character();
-            target.StrengthPoints = 12;
+            target.StrengthPoints = 2;
             target.MaxHPPoints = 3;
 
             Assert.AreEqual(15, target.MaxHP);
@@ -20,7 +20,7 @@ namespace GurpsEditorTests.Models
         public void CharacterMaxFP()
         {
             Character target = new Character();
-            target.HealthPoints = 12;
+            target.HealthPoints = 2;
             target.MaxFPPoints = 3;
 
             Assert.AreEqual(15, target.MaxFP);
@@ -30,7 +30,7 @@ namespace GurpsEditorTests.Models
         public void CharacterWillpower()
         {
             Character target = new Character();
-            target.IntelligencePoints = 12;
+            target.IntelligencePoints = 2;
             target.WillpowerPoints = 3;
 
             Assert.AreEqual(15, target.Willpower);
@@ -40,7 +40,7 @@ namespace GurpsEditorTests.Models
         public void CharacterPerception()
         {
             Character target = new Character();
-            target.IntelligencePoints = 12;
+            target.IntelligencePoints = 2;
             target.PerceptionPoints = 3;
 
             Assert.AreEqual(15, target.Perception);
@@ -50,7 +50,7 @@ namespace GurpsEditorTests.Models
         public void CharacterBasicLiftBelow10()
         {
             Character target = new Character();
-            target.StrengthPoints = 5;
+            target.StrengthPoints = -5;
 
             Assert.AreEqual(5F, target.BasicLift);
         }
@@ -59,7 +59,7 @@ namespace GurpsEditorTests.Models
         public void CharacterBasicLiftAbove10()
         {
             Character target = new Character();
-            target.StrengthPoints = 12;
+            target.StrengthPoints = 2;
 
             Assert.AreEqual(29F, target.BasicLift);
         }
@@ -68,8 +68,8 @@ namespace GurpsEditorTests.Models
         public void CharacterBasicSpeed()
         {
             Character target = new Character();
-            target.HealthPoints = 11;
-            target.DexterityPoints = 11;
+            target.HealthPoints = 1;
+            target.DexterityPoints = 1;
 
             Assert.AreEqual(5.5F, target.BasicSpeed);
 
@@ -82,8 +82,8 @@ namespace GurpsEditorTests.Models
         public void CharacterBasicMove()
         {
             Character target = new Character();
-            target.HealthPoints = 11;
-            target.DexterityPoints = 11;
+            target.HealthPoints = 1;
+            target.DexterityPoints = 1;
             target.BasicSpeedPoints = 0.75F;
 
             Assert.AreEqual(6.25F, target.BasicSpeed);
