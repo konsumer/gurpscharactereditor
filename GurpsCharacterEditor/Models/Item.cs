@@ -23,6 +23,25 @@
             Weight = weight;
         }
 
+        public Item(Item item)
+        {
+            Name = item.Name;
+            Value = item.Value;
+            Weight = item.Weight;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+                return false;
+            if (!(obj is Item))
+                return false;
+
+            Item item = (Item)obj;
+
+            return (item.Name.Equals(Name)) && (item.Value.Equals(Value)) && (item.Weight.Equals(Weight));
+        }
+
         public override string ToString()
         {
             return Name;
