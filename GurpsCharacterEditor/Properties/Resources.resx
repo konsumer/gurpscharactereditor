@@ -168,8 +168,29 @@
   <data name="CharacterSheetWillpower" xml:space="preserve">
     <value>Willpower:</value>
   </data>
+  <data name="EditItemName" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="EditItemValue" xml:space="preserve">
+    <value>Value:</value>
+  </data>
+  <data name="EditItemWeight" xml:space="preserve">
+    <value>Weight:</value>
+  </data>
+  <data name="EditItemWindow" xml:space="preserve">
+    <value>Edit item</value>
+  </data>
+  <data name="EditItemWindowCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="EditItemWindowOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
   <data name="MenuAbout" xml:space="preserve">
     <value>About...</value>
+  </data>
+  <data name="MenuAddItem" xml:space="preserve">
+    <value>Add item...</value>
   </data>
   <data name="MenuEdit" xml:space="preserve">
     <value>Edit</value>

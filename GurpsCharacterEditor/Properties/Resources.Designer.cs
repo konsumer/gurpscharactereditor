@@ -214,11 +214,74 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Name:.
+        /// </summary>
+        public static string EditItemName {
+            get {
+                return ResourceManager.GetString("EditItemName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value:.
+        /// </summary>
+        public static string EditItemValue {
+            get {
+                return ResourceManager.GetString("EditItemValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weight:.
+        /// </summary>
+        public static string EditItemWeight {
+            get {
+                return ResourceManager.GetString("EditItemWeight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit item.
+        /// </summary>
+        public static string EditItemWindow {
+            get {
+                return ResourceManager.GetString("EditItemWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string EditItemWindowCancel {
+            get {
+                return ResourceManager.GetString("EditItemWindowCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string EditItemWindowOk {
+            get {
+                return ResourceManager.GetString("EditItemWindowOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to About....
         /// </summary>
         public static string MenuAbout {
             get {
                 return ResourceManager.GetString("MenuAbout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add item....
+        /// </summary>
+        public static string MenuAddItem {
+            get {
+                return ResourceManager.GetString("MenuAddItem", resourceCulture);
             }
         }
         

@@ -9,6 +9,13 @@
         public int Value { get; set; }
         public int Weight { get; set; }
 
+        public Item()
+        {
+            Name = "";
+            Value = 0;
+            Weight = 0;
+        }
+
         public Item(string name, int value, int weight)
         {
             Name = name;

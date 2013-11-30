@@ -12,6 +12,7 @@ namespace GurpsCharacterEditor.ViewModels
         public DelegateCommand AboutCommand { get; private set; }
         public DelegateCommand EditPrimaryStatsCommand { get; private set; }
         public DelegateCommand EditSecondaryStatsCommand { get; private set; }
+        public DelegateCommand AddItemCommand { get; private set; }
 
         public MainViewModel()
             : this(new Character())
@@ -26,6 +27,7 @@ namespace GurpsCharacterEditor.ViewModels
             AboutCommand = new DelegateCommand(ShowAboutWindow);
             EditPrimaryStatsCommand = new DelegateCommand(EditPrimaryStats);
             EditSecondaryStatsCommand = new DelegateCommand(EditSecondaryStats);
+            AddItemCommand = new DelegateCommand(AddItem);
 
             // Setup property dependencies
             PropertyDependencyMap.Add("Strength", new[] { "MaxHP", "BasicLift" });
@@ -160,6 +162,19 @@ namespace GurpsCharacterEditor.ViewModels
         {
             AboutWindow window = new AboutWindow();
             window.ShowDialog();
+        }
+
+        public void AddItem(object parameter)
+        {
+            EditItemWindow window = new EditItemWindow();
+            window.DataContext = new Item();
+
+            if ((bool)window.ShowDialog())
+            {
+                Character.Inventory.Add((Item)window.DataContext);
+
+                NotifyPropertyChanged("Inventory");
+            }
         }
 
         public void EditPrimaryStats(object parameter)
