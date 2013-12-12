@@ -129,6 +129,29 @@ namespace GurpsCharacterEditor.Models
             }
         }
 
+        // Calculation of character points spent on this character
+        public int CharacterPointsPrimarySkill
+        {
+            get
+            {
+                return 10 * StrengthPoints + 20 * IntelligencePoints + 20 * DexterityPoints + 10 * HealthPoints;
+            }
+        }
+        public int CharacterPointsSecondarySkill
+        {
+            get
+            {
+                return 2 * MaxHPPoints + 5 * WillpowerPoints + 5 * PerceptionPoints + 3 * MaxFPPoints;
+            }
+        }
+        public int CharacterPoints
+        {
+            get
+            {
+                return CharacterPointsPrimarySkill + CharacterPointsSecondarySkill;
+            }
+        }
+
         public Character()
         {
         }

@@ -100,5 +100,43 @@ namespace GurpsEditorTests.Models
 
             Assert.AreEqual(14, target.TotalWeight);
         }
+
+        [TestMethod]
+        public void CharacterPointsPrimarySkill()
+        {
+            Character target = new Character();
+
+            target.StrengthPoints = 1;
+            target.IntelligencePoints = 0;
+            target.DexterityPoints = 2;
+            target.HealthPoints = 0;
+            Assert.AreEqual(50, target.CharacterPointsPrimarySkill);
+
+            target.StrengthPoints = 0;
+            target.IntelligencePoints = 2;
+            target.DexterityPoints = 0;
+            target.HealthPoints = 3;
+            Assert.AreEqual(70, target.CharacterPointsPrimarySkill);
+        }
+
+        [TestMethod]
+        public void CharacterPointsSecondarySkill()
+        {
+            Character target = new Character();
+            target.MaxHPPoints = 3;
+            Assert.AreEqual(6, target.CharacterPointsSecondarySkill);
+
+            target = new Character();
+            target.WillpowerPoints = 2;
+            Assert.AreEqual(10, target.CharacterPointsSecondarySkill);
+
+            target = new Character();
+            target.PerceptionPoints = 3;
+            Assert.AreEqual(15, target.CharacterPointsSecondarySkill);
+
+            target = new Character();
+            target.MaxFPPoints = 2;
+            Assert.AreEqual(6, target.CharacterPointsSecondarySkill);
+        }
     }
 }
