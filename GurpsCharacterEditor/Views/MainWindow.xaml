@@ -91,7 +91,7 @@
                     </StackPanel>
                     <StackPanel Margin="8 8 0 0">
                         <TextBlock Text="{x:Static p:Resources.CharacterSheetAdvantages}"/>
-                        <ListBox/>
+                        <ListBox ItemsSource="{Binding Path=Advantages}" Grid.IsSharedSizeScope="True" HorizontalContentAlignment="Stretch"/>
                         <TextBlock Margin="0 8 0 0" Text="{x:Static p:Resources.CharacterSheetSkills}"/>
                         <ListBox/>
                     </StackPanel>

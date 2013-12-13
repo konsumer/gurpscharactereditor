@@ -129,6 +129,16 @@ namespace GurpsCharacterEditor.Models
             }
         }
 
+        // Character advantages and disadvantages
+        private ObservableCollection<Advantage> advantages = new ObservableCollection<Advantage>();
+        public ObservableCollection<Advantage> Advantages
+        {
+            get
+            {
+                return advantages;
+            }
+        }
+
         // Calculation of character points spent on this character
         public int CharacterPointsPrimarySkill
         {

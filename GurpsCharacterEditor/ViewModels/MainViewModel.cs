@@ -134,6 +134,7 @@ namespace GurpsCharacterEditor.ViewModels
                 return Character.BasicMove;
             }
         }
+
         public ObservableCollection<Item> Inventory
         {
             get
@@ -146,6 +147,14 @@ namespace GurpsCharacterEditor.ViewModels
             get
             {
                 return Character.TotalWeight;
+            }
+        }
+
+        public ObservableCollection<Advantage> Advantages
+        {
+            get
+            {
+                return Character.Advantages;
             }
         }
 
