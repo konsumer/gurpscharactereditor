@@ -79,6 +79,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\Advantage.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="ViewModels\AboutViewModel.cs" />
