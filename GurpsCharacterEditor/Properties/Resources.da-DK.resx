@@ -190,16 +190,16 @@
     <value>Om...</value>
   </data>
   <data name="MenuAddItem" xml:space="preserve">
-    <value>Tilføj genstand...</value>
+    <value>Tilføj genstand</value>
   </data>
   <data name="MenuEdit" xml:space="preserve">
     <value>Rediger</value>
   </data>
   <data name="MenuEditPrimaryStats" xml:space="preserve">
-    <value>Rediger primære statistikker...</value>
+    <value>Rediger primære statistikker</value>
   </data>
   <data name="MenuEditSecondaryStats" xml:space="preserve">
-    <value>Rediger sekundære statistikker...</value>
+    <value>Rediger sekundære statistikker</value>
   </data>
   <data name="MenuHelp" xml:space="preserve">
     <value>Hjælp</value>
@@ -209,6 +209,9 @@
   </data>
   <data name="PrimaryStatsWindowOk" xml:space="preserve">
     <value>OK</value>
+  </data>
+  <data name="RibbonTabStats" xml:space="preserve">
+    <value>Statistikker</value>
   </data>
   <data name="SecondaryStatsWindow" xml:space="preserve">
     <value>Rediger sekundære statistikker</value>

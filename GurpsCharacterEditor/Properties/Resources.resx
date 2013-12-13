@@ -190,13 +190,13 @@
     <value>About...</value>
   </data>
   <data name="MenuAddItem" xml:space="preserve">
-    <value>Add item...</value>
+    <value>Add item</value>
   </data>
   <data name="MenuEdit" xml:space="preserve">
     <value>Edit</value>
   </data>
   <data name="MenuEditPrimaryStats" xml:space="preserve">
-    <value>Edit primary stats...</value>
+    <value>Edit primary stats</value>
   </data>
   <data name="MenuEditSecondaryStats" xml:space="preserve">
     <value>Edit secondary stats</value>
@@ -209,6 +209,9 @@
   </data>
   <data name="PrimaryStatsWindowOk" xml:space="preserve">
     <value>OK</value>
+  </data>
+  <data name="RibbonTabStats" xml:space="preserve">
+    <value>Statistics</value>
   </data>
   <data name="SecondaryStatsWindow" xml:space="preserve">
     <value>Edit secondary stats</value>

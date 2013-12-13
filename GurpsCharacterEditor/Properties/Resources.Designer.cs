@@ -277,7 +277,7 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add item....
+        ///   Looks up a localized string similar to Add item.
         /// </summary>
         public static string MenuAddItem {
             get {
@@ -295,7 +295,7 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Edit primary stats....
+        ///   Looks up a localized string similar to Edit primary stats.
         /// </summary>
         public static string MenuEditPrimaryStats {
             get {
@@ -336,6 +336,15 @@ namespace GurpsCharacterEditor.Properties {
         public static string PrimaryStatsWindowOk {
             get {
                 return ResourceManager.GetString("PrimaryStatsWindowOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Statistics.
+        /// </summary>
+        public static string RibbonTabStats {
+            get {
+                return ResourceManager.GetString("RibbonTabStats", resourceCulture);
             }
         }
         
