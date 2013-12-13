@@ -205,6 +205,15 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Character points:.
+        /// </summary>
+        public static string CharacterSheetTotalPoints {
+            get {
+                return ResourceManager.GetString("CharacterSheetTotalPoints", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Willpower:.
         /// </summary>
         public static string CharacterSheetWillpower {

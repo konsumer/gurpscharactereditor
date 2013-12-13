@@ -165,6 +165,9 @@
   <data name="CharacterSheetStrength" xml:space="preserve">
     <value>Strength:</value>
   </data>
+  <data name="CharacterSheetTotalPoints" xml:space="preserve">
+    <value>Character points:</value>
+  </data>
   <data name="CharacterSheetWillpower" xml:space="preserve">
     <value>Willpower:</value>
   </data>
