@@ -216,6 +216,42 @@ namespace GurpsCharacterEditor.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Name:.
         /// </summary>
+        public static string EditAdvantageName {
+            get {
+                return ResourceManager.GetString("EditAdvantageName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit advantage/disadvantage.
+        /// </summary>
+        public static string EditAdvantageWindow {
+            get {
+                return ResourceManager.GetString("EditAdvantageWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string EditAdvantageWindowCancel {
+            get {
+                return ResourceManager.GetString("EditAdvantageWindowCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string EditAdvantageWindowOk {
+            get {
+                return ResourceManager.GetString("EditAdvantageWindowOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name:.
+        /// </summary>
         public static string EditItemName {
             get {
                 return ResourceManager.GetString("EditItemName", resourceCulture);
@@ -273,6 +309,15 @@ namespace GurpsCharacterEditor.Properties {
         public static string MenuAbout {
             get {
                 return ResourceManager.GetString("MenuAbout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add advantage/disadvantage.
+        /// </summary>
+        public static string MenuAddAdvantage {
+            get {
+                return ResourceManager.GetString("MenuAddAdvantage", resourceCulture);
             }
         }
         

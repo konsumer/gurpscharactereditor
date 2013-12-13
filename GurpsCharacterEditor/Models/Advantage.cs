@@ -6,6 +6,12 @@
 
         public int Points { get; set; }
 
+        public Advantage()
+        {
+            Name = "";
+            Points = 0;
+        }
+
         public Advantage(string name, int points) {
             Name = name;
             Points = points;

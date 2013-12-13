@@ -168,6 +168,18 @@
   <data name="CharacterSheetWillpower" xml:space="preserve">
     <value>Viljestyrke:</value>
   </data>
+  <data name="EditAdvantageName" xml:space="preserve">
+    <value>Navn:</value>
+  </data>
+  <data name="EditAdvantageWindow" xml:space="preserve">
+    <value>Rediger fordel/ulempe</value>
+  </data>
+  <data name="EditAdvantageWindowCancel" xml:space="preserve">
+    <value>Annuller</value>
+  </data>
+  <data name="EditAdvantageWindowOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
   <data name="EditItemName" xml:space="preserve">
     <value>Navn:</value>
   </data>
@@ -188,6 +200,9 @@
   </data>
   <data name="MenuAbout" xml:space="preserve">
     <value>Om...</value>
+  </data>
+  <data name="MenuAddAdvantage" xml:space="preserve">
+    <value>Tilføj fordel/ulempe</value>
   </data>
   <data name="MenuAddItem" xml:space="preserve">
     <value>Tilføj genstand</value>
