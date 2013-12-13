@@ -154,11 +154,23 @@ namespace GurpsCharacterEditor.Models
                 return 2 * MaxHPPoints + 5 * WillpowerPoints + 5 * PerceptionPoints + 3 * MaxFPPoints;
             }
         }
+        public int CharacterPointsAdvantages
+        {
+            get
+            {
+                int points = 0;
+                foreach (Advantage advantage in Advantages)
+                {
+                    points += advantage.Points;
+                }
+                return points;
+            }
+        }
         public int CharacterPoints
         {
             get
             {
-                return CharacterPointsPrimarySkill + CharacterPointsSecondarySkill;
+                return CharacterPointsPrimarySkill + CharacterPointsSecondarySkill + CharacterPointsAdvantages;
             }
         }
 

@@ -138,5 +138,14 @@ namespace GurpsEditorTests.Models
             target.MaxFPPoints = 2;
             Assert.AreEqual(6, target.CharacterPointsSecondarySkill);
         }
+
+        [TestMethod]
+        public void CharacterPointsAdvantages()
+        {
+            Character target = new Character();
+            target.Advantages.Add(new Advantage("Advantage", 23));
+            target.Advantages.Add(new Advantage("Disadvantage", -11));
+            Assert.AreEqual(12, target.CharacterPointsAdvantages);
+        }
     }
 }
