@@ -231,8 +231,17 @@
   <data name="RibbonAppMenuItemQuit" xml:space="preserve">
     <value>Afslut</value>
   </data>
-  <data name="RibbonTabStats" xml:space="preserve">
+  <data name="RibbonGroupAdvantages" xml:space="preserve">
+    <value>Fordele/ulemper</value>
+  </data>
+  <data name="RibbonGroupInventory" xml:space="preserve">
+    <value>Inventar</value>
+  </data>
+  <data name="RibbonGroupStats" xml:space="preserve">
     <value>Statistikker</value>
+  </data>
+  <data name="RibbonTabCharacterSheet" xml:space="preserve">
+    <value>Karakterblad</value>
   </data>
   <data name="SecondaryStatsWindow" xml:space="preserve">
     <value>Rediger sekundære statistikker</value>

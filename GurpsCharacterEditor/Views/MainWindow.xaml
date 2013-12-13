@@ -18,11 +18,15 @@
                     <ribbon:RibbonApplicationMenuItem Header="{x:Static p:Resources.RibbonAppMenuItemQuit}" Click="QuitClick" />
                 </ribbon:RibbonApplicationMenu>
             </ribbon:Ribbon.ApplicationMenu>
-            <ribbon:RibbonTab Header="{x:Static p:Resources.RibbonTabStats}">
-                <ribbon:RibbonGroup>
+            <ribbon:RibbonTab Header="{x:Static p:Resources.RibbonTabCharacterSheet}">
+                <ribbon:RibbonGroup Header="{x:Static p:Resources.RibbonGroupStats}">
                     <ribbon:RibbonButton Label="{x:Static p:Resources.MenuEditPrimaryStats}" Command="{Binding EditPrimaryStatsCommand}"/>
                     <ribbon:RibbonButton Label="{x:Static p:Resources.MenuEditSecondaryStats}" Command="{Binding EditSecondaryStatsCommand}"/>
+                </ribbon:RibbonGroup>
+                <ribbon:RibbonGroup Header="{x:Static p:Resources.RibbonGroupInventory}">
                     <ribbon:RibbonButton Label="{x:Static p:Resources.MenuAddItem}" Command="{Binding AddItemCommand}"/>
+                </ribbon:RibbonGroup>
+                <ribbon:RibbonGroup Header="{x:Static p:Resources.RibbonGroupAdvantages}">
                     <ribbon:RibbonButton Label="{x:Static p:Resources.MenuAddAdvantage}" Command="{Binding AddAdvantageCommand}"/>
                 </ribbon:RibbonGroup>
             </ribbon:RibbonTab>

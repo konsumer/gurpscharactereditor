@@ -403,11 +403,38 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Advantages/disadvantages.
+        /// </summary>
+        public static string RibbonGroupAdvantages {
+            get {
+                return ResourceManager.GetString("RibbonGroupAdvantages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inventory.
+        /// </summary>
+        public static string RibbonGroupInventory {
+            get {
+                return ResourceManager.GetString("RibbonGroupInventory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Statistics.
         /// </summary>
-        public static string RibbonTabStats {
+        public static string RibbonGroupStats {
             get {
-                return ResourceManager.GetString("RibbonTabStats", resourceCulture);
+                return ResourceManager.GetString("RibbonGroupStats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Character sheet.
+        /// </summary>
+        public static string RibbonTabCharacterSheet {
+            get {
+                return ResourceManager.GetString("RibbonTabCharacterSheet", resourceCulture);
             }
         }
         
