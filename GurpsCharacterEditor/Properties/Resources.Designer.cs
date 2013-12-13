@@ -340,6 +340,15 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Quit.
+        /// </summary>
+        public static string RibbonAppMenuItemQuit {
+            get {
+                return ResourceManager.GetString("RibbonAppMenuItemQuit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Statistics.
         /// </summary>
         public static string RibbonTabStats {

@@ -1,4 +1,5 @@
-﻿using GurpsCharacterEditor.ViewModels;
+﻿using System.Windows;
+using GurpsCharacterEditor.ViewModels;
 using Microsoft.Windows.Controls.Ribbon;
 
 namespace GurpsCharacterEditor.Views
@@ -8,6 +9,11 @@ namespace GurpsCharacterEditor.Views
         public MainWindow()
         {
             DataContext = new MainViewModel();
+        }
+
+        private void QuitClick(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

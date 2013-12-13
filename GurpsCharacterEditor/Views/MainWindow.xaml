@@ -13,6 +13,11 @@
     </Window.Resources>
     <DockPanel>
         <ribbon:Ribbon DockPanel.Dock="Top">
+            <ribbon:Ribbon.ApplicationMenu>
+                <ribbon:RibbonApplicationMenu>
+                    <ribbon:RibbonApplicationMenuItem Header="{x:Static p:Resources.RibbonAppMenuItemQuit}" Click="QuitClick" />
+                </ribbon:RibbonApplicationMenu>
+            </ribbon:Ribbon.ApplicationMenu>
             <ribbon:RibbonTab Header="{x:Static p:Resources.RibbonTabStats}">
                 <ribbon:RibbonGroup>
                     <ribbon:RibbonButton Label="{x:Static p:Resources.MenuEditPrimaryStats}" Command="{Binding EditPrimaryStatsCommand}"/>

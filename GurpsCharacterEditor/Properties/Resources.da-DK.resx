@@ -210,6 +210,9 @@
   <data name="PrimaryStatsWindowOk" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="RibbonAppMenuItemQuit" xml:space="preserve">
+    <value>Afslut</value>
+  </data>
   <data name="RibbonTabStats" xml:space="preserve">
     <value>Statistikker</value>
   </data>
