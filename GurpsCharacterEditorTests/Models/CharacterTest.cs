@@ -147,5 +147,32 @@ namespace GurpsEditorTests.Models
             target.Advantages.Add(new Advantage("Disadvantage", -11));
             Assert.AreEqual(12, target.CharacterPointsAdvantages);
         }
+
+        [TestMethod]
+        public void CharacterPointsSkills()
+        {
+            Character character = new Character();
+            character.StrengthPoints = 1;
+            character.DexterityPoints = 2;
+            character.IntelligencePoints = 3;
+            character.HealthPoints = 4;
+
+            Skill skill;
+
+            Character target = new Character();
+            skill = new Skill(character, "abc", SkillStat.Intelligence, SkillDifficulty.Easy);
+            skill.RelativeLevel = 2;
+            target.Skills.Add(skill);
+            skill = new Skill(character, "def", SkillStat.Dexterity, SkillDifficulty.Average);
+            skill.RelativeLevel = 0;
+            target.Skills.Add(skill);
+            skill = new Skill(character, "ghi", SkillStat.Health, SkillDifficulty.VeryHard);
+            skill.RelativeLevel = -1;
+            target.Skills.Add(skill);
+            skill = new Skill(character, "jkl", SkillStat.Strength, SkillDifficulty.Hard);
+            skill.RelativeLevel = 3;
+            target.Skills.Add(skill);
+            Assert.AreEqual(4 + 2 + 4 + 16, target.CharacterPointsSkills);
+        }
     }
 }

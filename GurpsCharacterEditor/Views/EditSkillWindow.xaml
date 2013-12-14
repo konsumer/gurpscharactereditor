@@ -17,7 +17,7 @@
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="8 0 0 0" Grid.Column="1">
                 <TextBlock Text="{x:Static p:Resources.EditSkillRelativeLevel}"/>
-                <TextBox Text="{Binding Path=RelativeSkill, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox Text="{Binding Path=RelativeLevel, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
         </Grid>
         <StackPanel Orientation="Horizontal" Margin=" 8 0 8 8">

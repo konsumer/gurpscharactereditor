@@ -176,11 +176,23 @@ namespace GurpsCharacterEditor.Models
                 return points;
             }
         }
+        public int CharacterPointsSkills
+        {
+            get
+            {
+                int points = 0;
+                foreach (Skill skill in Skills)
+                {
+                    points += skill.Points;
+                }
+                return points;
+            }
+        }
         public int CharacterPoints
         {
             get
             {
-                return CharacterPointsPrimarySkill + CharacterPointsSecondarySkill + CharacterPointsAdvantages;
+                return CharacterPointsPrimarySkill + CharacterPointsSecondarySkill + CharacterPointsAdvantages + CharacterPointsSkills;
             }
         }
 
