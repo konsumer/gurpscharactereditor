@@ -47,6 +47,7 @@ namespace GurpsCharacterEditor.ViewModels
             PropertyDependencyMap.Add("BasicSpeed", new[] { "BasicMove" });
             PropertyDependencyMap.Add("BasicSpeedPoints", new[] { "BasicSpeed", "CharacterPoints" });
             PropertyDependencyMap.Add("BasicMovePoints", new[] { "BasicMove", "CharacterPoints" });
+            PropertyDependencyMap.Add("Advantages", new[] { "CharacterPoints" });
         }
 
         public string Name

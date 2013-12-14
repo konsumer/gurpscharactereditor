@@ -232,6 +232,15 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Points:.
+        /// </summary>
+        public static string EditAdvantagePoints {
+            get {
+                return ResourceManager.GetString("EditAdvantagePoints", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit advantage/disadvantage.
         /// </summary>
         public static string EditAdvantageWindow {
