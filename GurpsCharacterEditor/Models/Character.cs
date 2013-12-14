@@ -139,6 +139,16 @@ namespace GurpsCharacterEditor.Models
             }
         }
 
+        // Character skills
+        private ObservableCollection<Skill> skills = new ObservableCollection<Skill>();
+        public ObservableCollection<Skill> Skills
+        {
+            get
+            {
+                return skills;
+            }
+        }
+
         // Calculation of character points spent on this character
         public int CharacterPointsPrimarySkill
         {

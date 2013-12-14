@@ -14,6 +14,7 @@ namespace GurpsCharacterEditor.ViewModels
         public DelegateCommand EditSecondaryStatsCommand { get; private set; }
         public DelegateCommand AddItemCommand { get; private set; }
         public DelegateCommand AddAdvantageCommand { get; private set; }
+        public DelegateCommand AddSkillCommand { get; private set; }
 
         public MainViewModel()
             : this(new Character())
@@ -30,6 +31,7 @@ namespace GurpsCharacterEditor.ViewModels
             EditSecondaryStatsCommand = new DelegateCommand(EditSecondaryStats);
             AddItemCommand = new DelegateCommand(AddItem);
             AddAdvantageCommand = new DelegateCommand(AddAdvantage);
+            AddSkillCommand = new DelegateCommand(AddSkill);
 
             // Setup property dependencies
             PropertyDependencyMap.Add("Strength", new[] { "MaxHP", "BasicLift" });
@@ -48,6 +50,7 @@ namespace GurpsCharacterEditor.ViewModels
             PropertyDependencyMap.Add("BasicSpeedPoints", new[] { "BasicSpeed", "CharacterPoints" });
             PropertyDependencyMap.Add("BasicMovePoints", new[] { "BasicMove", "CharacterPoints" });
             PropertyDependencyMap.Add("Advantages", new[] { "CharacterPoints" });
+            PropertyDependencyMap.Add("Skills", new[] { "CharacterPoints" });
         }
 
         public string Name
@@ -161,6 +164,14 @@ namespace GurpsCharacterEditor.ViewModels
             }
         }
 
+        public ObservableCollection<Skill> Skills
+        {
+            get
+            {
+                return Character.Skills;
+            }
+        }
+
         // Returns the window title
         public string Title
         {
@@ -207,6 +218,19 @@ namespace GurpsCharacterEditor.ViewModels
                 Character.Advantages.Add((Advantage)window.DataContext);
 
                 NotifyPropertyChanged("Advantages");
+            }
+        }
+
+        public void AddSkill(object parameter)
+        {
+            EditSkillWindow window = new EditSkillWindow();
+            window.DataContext = new Skill(Character, "", SkillStat.Strength, SkillDifficulty.Average);
+
+            if ((bool)window.ShowDialog())
+            {
+                Character.Skills.Add((Skill)window.DataContext);
+
+                NotifyPropertyChanged("Skills");
             }
         }
 

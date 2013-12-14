@@ -322,6 +322,51 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Name:.
+        /// </summary>
+        public static string EditSkillName {
+            get {
+                return ResourceManager.GetString("EditSkillName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Relative level:.
+        /// </summary>
+        public static string EditSkillRelativeLevel {
+            get {
+                return ResourceManager.GetString("EditSkillRelativeLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit skill.
+        /// </summary>
+        public static string EditSkillWindow {
+            get {
+                return ResourceManager.GetString("EditSkillWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string EditSkillWindowCancel {
+            get {
+                return ResourceManager.GetString("EditSkillWindowCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string EditSkillWindowOk {
+            get {
+                return ResourceManager.GetString("EditSkillWindowOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to About....
         /// </summary>
         public static string MenuAbout {
@@ -345,6 +390,15 @@ namespace GurpsCharacterEditor.Properties {
         public static string MenuAddItem {
             get {
                 return ResourceManager.GetString("MenuAddItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add skill.
+        /// </summary>
+        public static string MenuAddSkill {
+            get {
+                return ResourceManager.GetString("MenuAddSkill", resourceCulture);
             }
         }
         
@@ -426,6 +480,15 @@ namespace GurpsCharacterEditor.Properties {
         public static string RibbonGroupInventory {
             get {
                 return ResourceManager.GetString("RibbonGroupInventory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skills.
+        /// </summary>
+        public static string RibbonGroupSkills {
+            get {
+                return ResourceManager.GetString("RibbonGroupSkills", resourceCulture);
             }
         }
         

@@ -204,6 +204,21 @@
   <data name="EditItemWindowOk" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="EditSkillName" xml:space="preserve">
+    <value>Navn:</value>
+  </data>
+  <data name="EditSkillRelativeLevel" xml:space="preserve">
+    <value>Relativt niveau:</value>
+  </data>
+  <data name="EditSkillWindow" xml:space="preserve">
+    <value>Rediger færdighed</value>
+  </data>
+  <data name="EditSkillWindowCancel" xml:space="preserve">
+    <value>Annuller</value>
+  </data>
+  <data name="EditSkillWindowOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
   <data name="MenuAbout" xml:space="preserve">
     <value>Om...</value>
   </data>
@@ -212,6 +227,9 @@
   </data>
   <data name="MenuAddItem" xml:space="preserve">
     <value>Tilføj genstand</value>
+  </data>
+  <data name="MenuAddSkill" xml:space="preserve">
+    <value>Tilføj færdighed</value>
   </data>
   <data name="MenuEdit" xml:space="preserve">
     <value>Rediger</value>
@@ -239,6 +257,9 @@
   </data>
   <data name="RibbonGroupInventory" xml:space="preserve">
     <value>Inventar</value>
+  </data>
+  <data name="RibbonGroupSkills" xml:space="preserve">
+    <value>Færdigheder</value>
   </data>
   <data name="RibbonGroupStats" xml:space="preserve">
     <value>Statistikker</value>

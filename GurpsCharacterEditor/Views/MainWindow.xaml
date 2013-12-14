@@ -29,6 +29,9 @@
                 <ribbon:RibbonGroup Header="{x:Static p:Resources.RibbonGroupAdvantages}">
                     <ribbon:RibbonButton Label="{x:Static p:Resources.MenuAddAdvantage}" Command="{Binding AddAdvantageCommand}"/>
                 </ribbon:RibbonGroup>
+                <ribbon:RibbonGroup Header="{x:Static p:Resources.RibbonGroupSkills}">
+                    <ribbon:RibbonButton Label="{x:Static p:Resources.MenuAddSkill}" Command="{Binding AddSkillCommand}"/>
+                </ribbon:RibbonGroup>
             </ribbon:RibbonTab>
         </ribbon:Ribbon>
         <Border Padding="10">
@@ -114,7 +117,7 @@
                         <TextBlock Text="{x:Static p:Resources.CharacterSheetAdvantages}"/>
                         <ListBox ItemsSource="{Binding Path=Advantages}" Grid.IsSharedSizeScope="True" HorizontalContentAlignment="Stretch"/>
                         <TextBlock Margin="0 8 0 0" Text="{x:Static p:Resources.CharacterSheetSkills}"/>
-                        <ListBox/>
+                        <ListBox ItemsSource="{Binding Path=Skills}" Grid.IsSharedSizeScope="True" HorizontalContentAlignment="Stretch"/>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
