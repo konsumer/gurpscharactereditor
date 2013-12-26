@@ -106,6 +106,12 @@
                                             <ColumnDefinition Width="Auto" SharedSizeGroup="ItemName"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
+                                        <Grid.ToolTip>
+                                            <StackPanel>
+                                                <TextBlock FontWeight="Bold" Text="{Binding Path=Name}" />
+                                                <TextBlock Text="{Binding Path=Description}" />
+                                            </StackPanel>
+                                        </Grid.ToolTip>
                                         <TextBlock Grid.Column="0" Text="{Binding Path=Name}" Margin="0 0 4 0"/>
                                         <TextBlock Grid.Column="1" Text="{Binding Path=Weight}"/>
                                     </Grid>
