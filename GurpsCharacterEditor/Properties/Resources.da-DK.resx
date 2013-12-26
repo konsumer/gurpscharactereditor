@@ -204,11 +204,17 @@
   <data name="EditItemWindowOk" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="EditSkillDifficulty" xml:space="preserve">
+    <value>Sværhedsgrad:</value>
+  </data>
   <data name="EditSkillName" xml:space="preserve">
     <value>Navn:</value>
   </data>
   <data name="EditSkillRelativeLevel" xml:space="preserve">
     <value>Relativt niveau:</value>
+  </data>
+  <data name="EditSkillStat" xml:space="preserve">
+    <value>Statistik:</value>
   </data>
   <data name="EditSkillWindow" xml:space="preserve">
     <value>Rediger færdighed</value>
