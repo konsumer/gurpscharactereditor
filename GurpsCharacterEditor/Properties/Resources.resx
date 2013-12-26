@@ -186,6 +186,9 @@
   <data name="EditAdvantageWindowOk" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="EditItemDescription" xml:space="preserve">
+    <value>Description:</value>
+  </data>
   <data name="EditItemName" xml:space="preserve">
     <value>Name:</value>
   </data>
