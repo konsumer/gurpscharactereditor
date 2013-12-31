@@ -340,6 +340,15 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Description:.
+        /// </summary>
+        public static string EditSkillDescription {
+            get {
+                return ResourceManager.GetString("EditSkillDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Difficulty:.
         /// </summary>
         public static string EditSkillDifficulty {

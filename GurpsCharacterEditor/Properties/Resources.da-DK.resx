@@ -210,6 +210,9 @@
   <data name="EditItemWindowOk" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="EditSkillDescription" xml:space="preserve">
+    <value>Beskrivelse:</value>
+  </data>
   <data name="EditSkillDifficulty" xml:space="preserve">
     <value>Sværhedsgrad:</value>
   </data>

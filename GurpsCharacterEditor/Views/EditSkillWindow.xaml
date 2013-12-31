@@ -12,20 +12,25 @@
                 <ColumnDefinition Width="Auto" SharedSizeGroup="Field"/>
                 <ColumnDefinition Width="Auto" SharedSizeGroup="Field"/>
                 <ColumnDefinition Width="Auto" SharedSizeGroup="Field"/>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="Field"/>
             </Grid.ColumnDefinitions>
             <StackPanel Orientation="Vertical" Grid.Column="0">
                 <TextBlock Text="{x:Static p:Resources.EditSkillName}"/>
                 <TextBox Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="8 0 0 0" Grid.Column="1">
+                <TextBlock Text="{x:Static p:Resources.EditSkillDescription}"/>
+                <TextBox Text="{Binding Path=Description, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="8 0 0 0" Grid.Column="2">
                 <TextBlock Text="{x:Static p:Resources.EditSkillStat}"/>
                 <TextBox Text="{Binding Path=Stat, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
-            <StackPanel Orientation="Vertical" Margin="8 0 0 0" Grid.Column="2">
+            <StackPanel Orientation="Vertical" Margin="8 0 0 0" Grid.Column="3">
                 <TextBlock Text="{x:Static p:Resources.EditSkillDifficulty}"/>
                 <TextBox Text="{Binding Path=Difficulty, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
-            <StackPanel Orientation="Vertical" Margin="8 0 0 0" Grid.Column="3">
+            <StackPanel Orientation="Vertical" Margin="8 0 0 0" Grid.Column="4">
                 <TextBlock Text="{x:Static p:Resources.EditSkillRelativeLevel}"/>
                 <TextBox Text="{Binding Path=RelativeLevel, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>

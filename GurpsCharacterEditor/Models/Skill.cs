@@ -8,8 +8,8 @@
 
     public class Skill
     {
-        // Name of the skill
         public string Name { get; set; }
+        public string Description { get; set; }
 
         // The stat this skill is based on.
         public SkillStat Stat { get; set; }
@@ -87,9 +87,10 @@
             RelativeLevel = null;
         }
 
-        public Skill(string name, SkillStat stat, SkillDifficulty difficulty)
+        public Skill(string name, string description, SkillStat stat, SkillDifficulty difficulty)
         {
             Name = name;
+            Description = description;
             Stat = stat;
             Difficulty = difficulty;
             RelativeLevel = null;

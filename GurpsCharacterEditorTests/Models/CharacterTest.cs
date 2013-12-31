@@ -160,16 +160,16 @@ namespace GurpsEditorTests.Models
             Skill skill;
 
             Character target = new Character();
-            skill = new Skill("abc", SkillStat.Intelligence, SkillDifficulty.Easy);
+            skill = new Skill("abc", "def", SkillStat.Intelligence, SkillDifficulty.Easy);
             skill.RelativeLevel = 2;
             target.Skills.Add(skill);
-            skill = new Skill("def", SkillStat.Dexterity, SkillDifficulty.Average);
+            skill = new Skill("def", "def", SkillStat.Dexterity, SkillDifficulty.Average);
             skill.RelativeLevel = 0;
             target.Skills.Add(skill);
-            skill = new Skill("ghi", SkillStat.Health, SkillDifficulty.VeryHard);
+            skill = new Skill("ghi", "def", SkillStat.Health, SkillDifficulty.VeryHard);
             skill.RelativeLevel = -1;
             target.Skills.Add(skill);
-            skill = new Skill("jkl", SkillStat.Strength, SkillDifficulty.Hard);
+            skill = new Skill("jkl", "def", SkillStat.Strength, SkillDifficulty.Hard);
             skill.RelativeLevel = 3;
             target.Skills.Add(skill);
             Assert.AreEqual(4 + 2 + 4 + 16, target.CharacterPointsSkills);
