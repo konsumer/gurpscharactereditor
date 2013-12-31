@@ -2,6 +2,8 @@
 using GurpsCharacterEditor.Models;
 using GurpsCharacterEditor.Views;
 using System.Diagnostics;
+using Microsoft.Win32;
+using System.IO;
 
 namespace GurpsCharacterEditor.ViewModels
 {
@@ -15,6 +17,8 @@ namespace GurpsCharacterEditor.ViewModels
         public DelegateCommand AddItemCommand { get; private set; }
         public DelegateCommand AddAdvantageCommand { get; private set; }
         public DelegateCommand AddSkillCommand { get; private set; }
+        public DelegateCommand OpenCommand { get; private set; }
+        public DelegateCommand SaveAsCommand { get; private set; }
 
         public MainViewModel()
             : this(new Character())
@@ -32,6 +36,8 @@ namespace GurpsCharacterEditor.ViewModels
             AddItemCommand = new DelegateCommand(AddItem);
             AddAdvantageCommand = new DelegateCommand(AddAdvantage);
             AddSkillCommand = new DelegateCommand(AddSkill);
+            OpenCommand = new DelegateCommand(Open);
+            SaveAsCommand = new DelegateCommand(SaveAs);
 
             // Setup property dependencies
             PropertyDependencyMap.Add("Strength", new[] { "MaxHP", "BasicLift" });
@@ -260,6 +266,32 @@ namespace GurpsCharacterEditor.ViewModels
             NotifyPropertyChanged("PerceptionPoints");
             NotifyPropertyChanged("BasicSpeedPoints");
             NotifyPropertyChanged("BasicMovePoints");
+        }
+
+        public void Open(object parameter)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.DefaultExt = ".gurps";
+            dialog.CheckFileExists = true;
+            dialog.Filter = "GURPS files|*.gurps";
+            if (dialog.ShowDialog() == true)
+            {
+                FileStream stream = File.OpenRead(dialog.FileName);
+                stream.Close();
+            }
+        }
+
+        public void SaveAs(object parameter)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.DefaultExt = ".gurps";
+            dialog.OverwritePrompt = true;
+            dialog.CheckPathExists = true;
+            dialog.Filter = "GURPS files|*.gurps";
+            if (dialog.ShowDialog() == true) {
+                FileStream stream = File.OpenWrite(dialog.FileName);
+                stream.Close();
+            }
         }
     }
 }

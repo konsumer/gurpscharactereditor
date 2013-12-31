@@ -258,8 +258,14 @@
   <data name="PrimaryStatsWindowOk" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="RibbonAppMenuItemOpen" xml:space="preserve">
+    <value>Open</value>
+  </data>
   <data name="RibbonAppMenuItemQuit" xml:space="preserve">
     <value>Quit</value>
+  </data>
+  <data name="RibbonAppMenuItemSaveAs" xml:space="preserve">
+    <value>Save as</value>
   </data>
   <data name="RibbonGroupAdvantages" xml:space="preserve">
     <value>Advantages/disadvantages</value>

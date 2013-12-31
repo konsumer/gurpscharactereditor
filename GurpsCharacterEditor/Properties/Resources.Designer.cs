@@ -484,11 +484,29 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Open.
+        /// </summary>
+        public static string RibbonAppMenuItemOpen {
+            get {
+                return ResourceManager.GetString("RibbonAppMenuItemOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Quit.
         /// </summary>
         public static string RibbonAppMenuItemQuit {
             get {
                 return ResourceManager.GetString("RibbonAppMenuItemQuit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save as.
+        /// </summary>
+        public static string RibbonAppMenuItemSaveAs {
+            get {
+                return ResourceManager.GetString("RibbonAppMenuItemSaveAs", resourceCulture);
             }
         }
         
