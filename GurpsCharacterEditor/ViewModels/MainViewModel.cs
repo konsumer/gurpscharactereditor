@@ -4,6 +4,7 @@ using GurpsCharacterEditor.Views;
 using System.Diagnostics;
 using Microsoft.Win32;
 using System.IO;
+using System.Xml.Serialization;
 
 namespace GurpsCharacterEditor.ViewModels
 {
@@ -276,8 +277,14 @@ namespace GurpsCharacterEditor.ViewModels
             dialog.Filter = "GURPS files|*.gurps";
             if (dialog.ShowDialog() == true)
             {
+                // Deserialize the file
                 FileStream stream = File.OpenRead(dialog.FileName);
+                XmlSerializer serializer = new XmlSerializer(Character.GetType());
+                Character = (Character)serializer.Deserialize(stream);
                 stream.Close();
+
+                // Notify all properties changed
+                NotifyPropertyChanged(string.Empty);
             }
         }
 
@@ -289,7 +296,10 @@ namespace GurpsCharacterEditor.ViewModels
             dialog.CheckPathExists = true;
             dialog.Filter = "GURPS files|*.gurps";
             if (dialog.ShowDialog() == true) {
+                // Serialize the models
                 FileStream stream = File.OpenWrite(dialog.FileName);
+                XmlSerializer serializer = new XmlSerializer(Character.GetType());
+                serializer.Serialize(stream, Character);
                 stream.Close();
             }
         }
