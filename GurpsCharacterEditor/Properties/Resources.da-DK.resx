@@ -174,6 +174,9 @@
   <data name="DialogLoadFailed" xml:space="preserve">
     <value>Indlæsning af filen mislykkedes.</value>
   </data>
+  <data name="EditAdvantageDescription" xml:space="preserve">
+    <value>Beskrivelse:</value>
+  </data>
   <data name="EditAdvantageName" xml:space="preserve">
     <value>Navn:</value>
   </data>

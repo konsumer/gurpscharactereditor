@@ -10,12 +10,17 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" SharedSizeGroup="Field"/>
                 <ColumnDefinition Width="Auto" SharedSizeGroup="Field"/>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="Field"/>
             </Grid.ColumnDefinitions>
             <StackPanel Orientation="Vertical" Grid.Column="0">
                 <TextBlock Text="{x:Static p:Resources.EditAdvantageName}"/>
                 <TextBox Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="8 0 0 0" Grid.Column="1">
+                <TextBlock Text="{x:Static p:Resources.EditAdvantageDescription}"/>
+                <TextBox Text="{Binding Path=Description, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="8 0 0 0" Grid.Column="2">
                 <TextBlock Text="{x:Static p:Resources.EditAdvantagePoints}"/>
                 <TextBox Text="{Binding Path=Points, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>

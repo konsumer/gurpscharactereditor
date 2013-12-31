@@ -143,8 +143,8 @@ namespace GurpsEditorTests.Models
         public void CharacterPointsAdvantages()
         {
             Character target = new Character();
-            target.Advantages.Add(new Advantage("Advantage", 23));
-            target.Advantages.Add(new Advantage("Disadvantage", -11));
+            target.Advantages.Add(new Advantage("Advantage", "An advantage", 23));
+            target.Advantages.Add(new Advantage("Disadvantage", "A disadvantage", -11));
             Assert.AreEqual(12, target.CharacterPointsAdvantages);
         }
 

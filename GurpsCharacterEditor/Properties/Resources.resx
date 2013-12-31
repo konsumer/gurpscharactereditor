@@ -174,6 +174,9 @@
   <data name="DialogLoadFailed" xml:space="preserve">
     <value>Failed to load file.</value>
   </data>
+  <data name="EditAdvantageDescription" xml:space="preserve">
+    <value>Description:</value>
+  </data>
   <data name="EditAdvantageName" xml:space="preserve">
     <value>Name:</value>
   </data>
