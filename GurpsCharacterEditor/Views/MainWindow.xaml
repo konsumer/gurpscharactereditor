@@ -140,7 +140,20 @@
                             </ListBox.ItemTemplate>
                         </ListBox>
                         <TextBlock Margin="0 8 0 0" Text="{x:Static p:Resources.CharacterSheetSkills}"/>
-                        <ListBox ItemsSource="{Binding Path=Skills}" Grid.IsSharedSizeScope="True" HorizontalContentAlignment="Stretch"/>
+                        <ListBox ItemsSource="{Binding Path=Skills}" Grid.IsSharedSizeScope="True" HorizontalContentAlignment="Stretch">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Grid.Column="0" Text="{Binding Path=Name}" Margin="0 0 4 0">
+                                        <TextBlock.ToolTip>
+                                            <StackPanel>
+                                                <TextBlock FontWeight="Bold" Text="{Binding Path=Name}" />
+                                                <TextBlock Text="{Binding Path=Description}" />
+                                            </StackPanel>
+                                        </TextBlock.ToolTip>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
