@@ -1,10 +1,11 @@
-﻿using System.Collections.ObjectModel;
-using GurpsCharacterEditor.Models;
-using GurpsCharacterEditor.Views;
-using System.Diagnostics;
-using Microsoft.Win32;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Xml.Serialization;
+using GurpsCharacterEditor.Models;
+using GurpsCharacterEditor.Properties;
+using GurpsCharacterEditor.Views;
+using Microsoft.Win32;
 
 namespace GurpsCharacterEditor.ViewModels
 {
@@ -280,7 +281,14 @@ namespace GurpsCharacterEditor.ViewModels
                 // Deserialize the file
                 FileStream stream = File.OpenRead(dialog.FileName);
                 XmlSerializer serializer = new XmlSerializer(Character.GetType());
-                Character = (Character)serializer.Deserialize(stream);
+                try
+                {
+                    Character = (Character)serializer.Deserialize(stream);
+                }
+                catch (InvalidOperationException)
+                {
+                    System.Windows.MessageBox.Show(Resources.DialogLoadFailed);
+                }
                 stream.Close();
 
                 // Notify all properties changed

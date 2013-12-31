@@ -223,6 +223,15 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to load file..
+        /// </summary>
+        public static string DialogLoadFailed {
+            get {
+                return ResourceManager.GetString("DialogLoadFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name:.
         /// </summary>
         public static string EditAdvantageName {
