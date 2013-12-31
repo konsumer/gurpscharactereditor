@@ -8,8 +8,6 @@
 
     public class Skill
     {
-        Character character;
-
         // Name of the skill
         public string Name { get; set; }
 
@@ -60,36 +58,37 @@
         }
 
         // The effective skill level.
-        public int? Level
+        public int? Level(Character character)
         {
-            get
+            // If skill is not learned, skill level is not applicable.
+            if (RelativeLevel == null)
+                return null;
+            else
             {
-                // If skill is not learned, skill level is not applicable.
-                if (RelativeLevel == null)
-                    return null;
-                else
+                // Add base skill level to relative level.
+                switch (Stat)
                 {
-                    // Add base skill level to relative level.
-                    switch (Stat)
-                    {
-                        case SkillStat.Strength:
-                            return character.Strength + (int)RelativeLevel;
-                        case SkillStat.Dexterity:
-                            return character.Dexterity + (int)RelativeLevel;
-                        case SkillStat.Intelligence:
-                            return character.Intelligence + (int)RelativeLevel;
-                        case SkillStat.Health:
-                            return character.Health + (int)RelativeLevel;
-                        default:
-                            return null;
-                    }
+                    case SkillStat.Strength:
+                        return character.Strength + (int)RelativeLevel;
+                    case SkillStat.Dexterity:
+                        return character.Dexterity + (int)RelativeLevel;
+                    case SkillStat.Intelligence:
+                        return character.Intelligence + (int)RelativeLevel;
+                    case SkillStat.Health:
+                        return character.Health + (int)RelativeLevel;
+                    default:
+                        return null;
                 }
             }
         }
 
-        public Skill(Character character, string name, SkillStat stat, SkillDifficulty difficulty)
+        public Skill() {
+            Name = "";
+            RelativeLevel = null;
+        }
+
+        public Skill(string name, SkillStat stat, SkillDifficulty difficulty)
         {
-            this.character = character;
             Name = name;
             Stat = stat;
             Difficulty = difficulty;

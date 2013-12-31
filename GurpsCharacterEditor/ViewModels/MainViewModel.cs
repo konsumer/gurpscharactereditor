@@ -230,7 +230,7 @@ namespace GurpsCharacterEditor.ViewModels
         public void AddSkill(object parameter)
         {
             EditSkillWindow window = new EditSkillWindow();
-            window.DataContext = new Skill(Character, "", SkillStat.Strength, SkillDifficulty.Average);
+            window.DataContext = new Skill();
 
             if ((bool)window.ShowDialog())
             {
