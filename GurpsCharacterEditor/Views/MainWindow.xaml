@@ -17,6 +17,7 @@
                 <ribbon:RibbonApplicationMenu>
                     <ribbon:RibbonApplicationMenuItem Header="{x:Static p:Resources.RibbonAppMenuItemOpen}" Command="{Binding OpenCommand}"/>
                     <ribbon:RibbonApplicationMenuItem Header="{x:Static p:Resources.RibbonAppMenuItemSaveAs}" Command="{Binding SaveAsCommand}"/>
+                    <ribbon:RibbonApplicationMenuItem Header="{x:Static p:Resources.RibbonAppMenuItemAbout}" Command="{Binding AboutCommand}"/>
                     <ribbon:RibbonApplicationMenuItem Header="{x:Static p:Resources.RibbonAppMenuItemQuit}" Click="QuitClick" />
                 </ribbon:RibbonApplicationMenu>
             </ribbon:Ribbon.ApplicationMenu>

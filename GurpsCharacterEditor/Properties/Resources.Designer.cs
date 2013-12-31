@@ -403,15 +403,6 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to About....
-        /// </summary>
-        public static string MenuAbout {
-            get {
-                return ResourceManager.GetString("MenuAbout", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Add advantage/disadvantage.
         /// </summary>
         public static string MenuAddAdvantage {
@@ -489,6 +480,15 @@ namespace GurpsCharacterEditor.Properties {
         public static string PrimaryStatsWindowOk {
             get {
                 return ResourceManager.GetString("PrimaryStatsWindowOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About.
+        /// </summary>
+        public static string RibbonAppMenuItemAbout {
+            get {
+                return ResourceManager.GetString("RibbonAppMenuItemAbout", resourceCulture);
             }
         }
         

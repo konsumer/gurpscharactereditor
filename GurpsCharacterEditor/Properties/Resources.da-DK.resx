@@ -231,9 +231,6 @@
   <data name="EditSkillWindowOk" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="MenuAbout" xml:space="preserve">
-    <value>Om...</value>
-  </data>
   <data name="MenuAddAdvantage" xml:space="preserve">
     <value>Tilføj fordel/ulempe</value>
   </data>
@@ -260,6 +257,9 @@
   </data>
   <data name="PrimaryStatsWindowOk" xml:space="preserve">
     <value>OK</value>
+  </data>
+  <data name="RibbonAppMenuItemAbout" xml:space="preserve">
+    <value>Om</value>
   </data>
   <data name="RibbonAppMenuItemOpen" xml:space="preserve">
     <value>Åbn</value>
