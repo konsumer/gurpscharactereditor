@@ -38,7 +38,7 @@ namespace GurpsEditorTests.Models
         }
 
         [TestMethod]
-        public void SkillLevel()
+        public void NonDefaultSkillLevel()
         {
             Character character = new Character();
             character.StrengthPoints = 1;
@@ -67,6 +67,22 @@ namespace GurpsEditorTests.Models
             Assert.IsNull(target.Level(character));
             target.RelativeLevel = 3;
             Assert.AreEqual(14, target.Level(character));
+        }
+
+        [TestMethod]
+        public void DefaultSkillLevel()
+        {
+            Character character = new Character();
+            character.StrengthPoints = 1;
+            character.DexterityPoints = 2;
+            character.IntelligencePoints = 3;
+            character.HealthPoints = 4;
+
+            Skill target;
+
+            target = new Skill("abc", "def", SkillStat.Intelligence, SkillDifficulty.Easy);
+            target.DefaultRelativeLevel = -4;
+            Assert.AreEqual(9, target.Level(character));
         }
     }
 }

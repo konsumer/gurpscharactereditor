@@ -20,6 +20,10 @@
         // The skill level relative to the base skill level.
         public int? RelativeLevel { get; set; }
 
+        // The skill level relative to the base skill level if the skill is untrained.
+        // If null, the skill is impossible without training.
+        public int? DefaultRelativeLevel { get; set; }
+
         // The number of character points the training of this level is worth.
         public int Points
         {
@@ -60,9 +64,28 @@
         // The effective skill level.
         public int? Level(Character character)
         {
-            // If skill is not learned, skill level is not applicable.
+            // If skill is not learned
             if (RelativeLevel == null)
-                return null;
+            {
+                // Skill impossible
+                if (DefaultRelativeLevel == null)
+                    return null;
+
+                // Default skill level;
+                switch (Stat)
+                {
+                    case SkillStat.Strength:
+                        return character.Strength + (int)DefaultRelativeLevel;
+                    case SkillStat.Dexterity:
+                        return character.Dexterity + (int)DefaultRelativeLevel;
+                    case SkillStat.Intelligence:
+                        return character.Intelligence + (int)DefaultRelativeLevel;
+                    case SkillStat.Health:
+                        return character.Health + (int)DefaultRelativeLevel;
+                    default:
+                        return null;
+                }
+            }
             else
             {
                 // Add base skill level to relative level.
@@ -83,8 +106,6 @@
         }
 
         public Skill() {
-            Name = "";
-            RelativeLevel = null;
         }
 
         public Skill(string name, string description, SkillStat stat, SkillDifficulty difficulty)
