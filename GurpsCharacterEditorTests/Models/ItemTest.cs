@@ -19,7 +19,9 @@ namespace GurpsEditorTests.Models
         public void ItemEquals()
         {
             Item target = new Item("Bucket", 5, 15);
+            target.Description = "Big bucket.";
             Item item = new Item("Bucket", 5, 15);
+            item.Description = "Big bucket.";
 
             Assert.IsFalse(target.Equals(null));
             Assert.IsFalse(target.Equals(new object()));
@@ -28,6 +30,9 @@ namespace GurpsEditorTests.Models
             item.Name = "Paper";
             Assert.IsFalse(target.Equals(item));
             item.Name = "Bucket";
+            item.Description = "Small bucket.";
+            Assert.IsFalse(target.Equals(item));
+            item.Description = "Big bucket.";
             item.Value = 10;
             Assert.IsFalse(target.Equals(item));
             item.Value = 5;

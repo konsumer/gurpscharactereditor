@@ -2,6 +2,8 @@
 {
     // This item represents an inventory item, which can be carried by a
     // character.
+    //
+    // This class is mutable - do not use as key in dictionaries.
     public class Item
     {
         public string Name { get; set; }
@@ -12,6 +14,7 @@
         public Item()
         {
             Name = "";
+            Description = "";
             Value = 0;
             Weight = 0;
         }
@@ -19,6 +22,7 @@
         public Item(string name, int value, int weight)
         {
             Name = name;
+            Description = "";
             Value = value;
             Weight = weight;
         }
@@ -26,6 +30,7 @@
         public Item(Item item)
         {
             Name = item.Name;
+            Description = item.Description;
             Value = item.Value;
             Weight = item.Weight;
         }
@@ -39,7 +44,18 @@
 
             Item item = (Item)obj;
 
-            return (item.Name.Equals(Name)) && (item.Value.Equals(Value)) && (item.Weight.Equals(Weight));
+            return (item.Name.Equals(Name)) && (item.Description.Equals(Description)) && (item.Value.Equals(Value)) && (item.Weight.Equals(Weight));
+        }
+
+        public override int GetHashCode()
+        {
+            int hash = 17;
+            hash = hash * 23 + Name.GetHashCode();
+            hash = hash * 23 + Description.GetHashCode();
+            hash = hash * 23 + Value.GetHashCode();
+            hash = hash * 23 + Weight.GetHashCode();
+
+            return hash;
         }
 
         public override string ToString()
