@@ -7,6 +7,7 @@
         public Weapon()
             : base()
         {
+            MinimumStrength = 0;
         }
 
         public Weapon(string name, int value, int weight)
