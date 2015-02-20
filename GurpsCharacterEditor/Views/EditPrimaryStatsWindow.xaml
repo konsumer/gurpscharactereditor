@@ -30,8 +30,9 @@
                 <TextBox Text="{Binding Path=HealthPoints, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
         </Grid>
-        <StackPanel Margin=" 8 0 8 8">
+        <StackPanel Margin=" 8 0 8 8" Orientation="Horizontal">
             <Button Content="{x:Static p:Resources.PrimaryStatsWindowOk}" Click="OkButtonClick" />
+            <Button Margin=" 8 0 0 0" Content="{x:Static p:Resources.PrimaryStatsWindowCancel}" Click="CancelButtonClick" />
         </StackPanel>
     </StackPanel>
 </Window>

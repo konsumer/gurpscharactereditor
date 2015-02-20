@@ -13,7 +13,12 @@ namespace GurpsCharacterEditor.Views
 
         private void OkButtonClick(object sender, RoutedEventArgs e)
         {
-            Close();
+            DialogResult = true;
+        }
+
+        private void CancelButtonClick(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }

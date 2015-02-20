@@ -245,14 +245,21 @@ namespace GurpsCharacterEditor.ViewModels
         public void EditPrimaryStats(object parameter)
         {
             EditPrimaryStatsWindow window = new EditPrimaryStatsWindow();
+            Character copy = (Character)Character.Copy();
             window.DataContext = new EditPrimaryStatsViewModel(Character);
 
-            window.ShowDialog();
-
-            NotifyPropertyChanged("StrengthPoints");
-            NotifyPropertyChanged("DexterityPoints");
-            NotifyPropertyChanged("IntelligencePoints");
-            NotifyPropertyChanged("HealthPoints");
+            bool? result = window.ShowDialog();
+            if (result.HasValue && (result == true))
+            {
+                NotifyPropertyChanged("StrengthPoints");
+                NotifyPropertyChanged("DexterityPoints");
+                NotifyPropertyChanged("IntelligencePoints");
+                NotifyPropertyChanged("HealthPoints");
+            }
+            else
+            {
+                Character = copy;
+            }
         }
 
         public void EditSecondaryStats(object parameter)

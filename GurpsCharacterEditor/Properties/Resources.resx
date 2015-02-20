@@ -261,6 +261,9 @@
   <data name="PrimaryStatsWindow" xml:space="preserve">
     <value>Edit primary stats</value>
   </data>
+  <data name="PrimaryStatsWindowCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="PrimaryStatsWindowOk" xml:space="preserve">
     <value>OK</value>
   </data>

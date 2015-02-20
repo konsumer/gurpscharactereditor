@@ -261,6 +261,9 @@
   <data name="PrimaryStatsWindow" xml:space="preserve">
     <value>Rediger primære statistikker</value>
   </data>
+  <data name="PrimaryStatsWindowCancel" xml:space="preserve">
+    <value>Annuller</value>
+  </data>
   <data name="PrimaryStatsWindowOk" xml:space="preserve">
     <value>OK</value>
   </data>
