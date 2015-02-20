@@ -8,7 +8,7 @@ namespace GurpsCharacterEditor.Views
     {
         public MainWindow()
         {
-            DataContext = new MainViewModel();
+            DataContext = new MainViewModel(this);
         }
 
         private void QuitClick(object sender, RoutedEventArgs e)

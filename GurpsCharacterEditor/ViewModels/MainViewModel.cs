@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Windows;
 using System.Xml.Serialization;
 using GurpsCharacterEditor.Models;
 using GurpsCharacterEditor.Properties;
@@ -11,6 +12,8 @@ namespace GurpsCharacterEditor.ViewModels
 {
     class MainViewModel : ViewModelBase
     {
+        protected Window Owner;
+
         public Character Character { get; set; }
 
         public DelegateCommand AboutCommand { get; private set; }
@@ -22,13 +25,14 @@ namespace GurpsCharacterEditor.ViewModels
         public DelegateCommand OpenCommand { get; private set; }
         public DelegateCommand SaveAsCommand { get; private set; }
 
-        public MainViewModel()
-            : this(new Character())
+        public MainViewModel(Window owner)
+            : this(owner, new Character())
         {
         }
 
-        public MainViewModel(Character character)
+        public MainViewModel(Window owner, Character character)
         {
+            Owner = owner;
             Character = character;
 
             // Create commands
@@ -231,12 +235,14 @@ namespace GurpsCharacterEditor.ViewModels
         public void ShowAboutWindow(object parameter)
         {
             AboutWindow window = new AboutWindow();
+            window.Owner = Owner;
             window.ShowDialog();
         }
 
         public void AddItem(object parameter)
         {
             EditItemWindow window = new EditItemWindow();
+            window.Owner = Owner;
             window.DataContext = new Item();
 
             bool? result = window.ShowDialog();
@@ -251,6 +257,7 @@ namespace GurpsCharacterEditor.ViewModels
         public void AddAdvantage(object parameter)
         {
             EditAdvantageWindow window = new EditAdvantageWindow();
+            window.Owner = Owner;
             window.DataContext = new Advantage();
 
             bool? result = window.ShowDialog();
@@ -265,6 +272,7 @@ namespace GurpsCharacterEditor.ViewModels
         public void AddSkill(object parameter)
         {
             EditSkillWindow window = new EditSkillWindow();
+            window.Owner = Owner;
             window.DataContext = new Skill();
 
             bool? result = window.ShowDialog();
@@ -279,6 +287,7 @@ namespace GurpsCharacterEditor.ViewModels
         public void EditPrimaryStats(object parameter)
         {
             EditPrimaryStatsWindow window = new EditPrimaryStatsWindow();
+            window.Owner = Owner;
             window.DataContext = new EditPrimaryStatsViewModel(Character);
 
             Character copy = (Character)Character.Copy();
@@ -299,6 +308,7 @@ namespace GurpsCharacterEditor.ViewModels
         public void EditSecondaryStats(object parameter)
         {
             EditSecondaryStatsWindow window = new EditSecondaryStatsWindow();
+            window.Owner = Owner;
             window.DataContext = new EditSecondaryStatsViewModel(Character);
 
             Character copy = (Character)Character.Copy();
