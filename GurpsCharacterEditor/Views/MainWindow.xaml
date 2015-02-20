@@ -92,9 +92,15 @@
                                 <TextBlock Text="{Binding Path=BasicMove}" Style="{StaticResource Stat}"/>
                             </StackPanel>
                         </StackPanel>
-                        <StackPanel Margin="8 0 0 0" Orientation="Vertical">
-                            <TextBlock Text="{x:Static p:Resources.CharacterSheetTotalPoints}"/>
-                            <TextBlock Text="{Binding Path=CharacterPoints}" />
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel Margin="8 0 0 0" Orientation="Vertical">
+                                <TextBlock Text="{x:Static p:Resources.CharacterSheetTotalPoints}"/>
+                                <TextBlock Text="{Binding Path=CharacterPoints}" />
+                            </StackPanel>
+                            <StackPanel Margin="8 0 0 0" Orientation="Vertical">
+                                <TextBlock Text="{x:Static p:Resources.CharacterSheetEncumbrance}"/>
+                                <TextBlock Text="{Binding Path=Encumbrance}" />
+                            </StackPanel>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>

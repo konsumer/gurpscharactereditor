@@ -128,6 +128,21 @@ namespace GurpsCharacterEditor.Models
                 return w;
             }
         }
+        public int? Encumbrance
+        {
+            get
+            {
+                float bl = BasicLift;
+                float weight = TotalWeight;
+
+                if (weight <= bl) return 0;
+                if (weight <= 2 * bl) return 1;
+                if (weight <= 3 * bl) return 2;
+                if (weight <= 6 * bl) return 3;
+                if (weight <= 10 * bl) return 4;
+                return null;
+            }
+        }
 
         // Character advantages and disadvantages
         private ObservableCollection<Advantage> advantages = new ObservableCollection<Advantage>();
@@ -200,7 +215,8 @@ namespace GurpsCharacterEditor.Models
         {
         }
 
-        public Character Copy() {
+        public Character Copy()
+        {
             return (Character)this.MemberwiseClone();
         }
 

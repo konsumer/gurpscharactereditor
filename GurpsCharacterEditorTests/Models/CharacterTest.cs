@@ -174,5 +174,52 @@ namespace GurpsEditorTests.Models
             target.Skills.Add(skill);
             Assert.AreEqual(4 + 2 + 4 + 16, target.CharacterPointsSkills);
         }
+
+        [TestMethod]
+        public void CharacterEncumbranceLimit()
+        {
+            Character target = new Character();
+
+            Item item1 = new Item("Item 1", 0, 19);
+            Item item2 = new Item("Item 1", 0, 1);
+            Item item3 = new Item("Item 1", 0, 1);
+
+            target.Inventory.Add(item1);
+            Assert.AreEqual(0, target.Encumbrance);
+            target.Inventory.Add(item2);
+            Assert.AreEqual(0, target.Encumbrance);
+            target.Inventory.Add(item3);
+            Assert.AreEqual(1, target.Encumbrance);
+        }
+
+        [TestMethod]
+        public void CharacterEncumbranceLevels()
+        {
+            Character target = new Character();
+
+            Item item1 = new Item("Item 1", 0, 15);
+            Item item2 = new Item("Item 1", 0, 20);
+            Item item3 = new Item("Item 1", 0, 60);
+
+            target.Inventory.Add(item1);
+            Assert.AreEqual(0, target.Encumbrance);
+            target.Inventory.Add(item2);
+            Assert.AreEqual(1, target.Encumbrance);
+            target.Inventory.Add(item3);
+            Assert.AreEqual(3, target.Encumbrance);
+        }
+
+        [TestMethod]
+        public void CharacterEncumbranceBasicLift()
+        {
+            Character target = new Character();
+
+            Item item = new Item("Item 1", 0, 25);
+
+            target.Inventory.Add(item);
+            Assert.AreEqual(1, target.Encumbrance);
+            target.StrengthPoints = 2; // BasicLift == 29
+            Assert.AreEqual(0, target.Encumbrance);
+        }
     }
 }

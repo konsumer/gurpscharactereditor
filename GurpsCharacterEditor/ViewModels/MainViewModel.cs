@@ -57,6 +57,8 @@ namespace GurpsCharacterEditor.ViewModels
             PropertyDependencyMap.Add("BasicSpeed", new[] { "BasicMove" });
             PropertyDependencyMap.Add("BasicSpeedPoints", new[] { "BasicSpeed", "CharacterPoints" });
             PropertyDependencyMap.Add("BasicMovePoints", new[] { "BasicMove", "CharacterPoints" });
+            PropertyDependencyMap.Add("BasicLift", new[] { "Encumbrance" });
+            PropertyDependencyMap.Add("Inventory", new[] { "Encumbrance" });
             PropertyDependencyMap.Add("Advantages", new[] { "CharacterPoints" });
             PropertyDependencyMap.Add("Skills", new[] { "CharacterPoints" });
         }
@@ -194,6 +196,20 @@ namespace GurpsCharacterEditor.ViewModels
             get
             {
                 return Character.CharacterPoints;
+            }
+        }
+        public string Encumbrance
+        {
+            get
+            {
+                if (Character.Encumbrance.HasValue)
+                {
+                    return Character.Encumbrance.ToString();
+                }
+                else
+                {
+                    return "N/A";
+                }
             }
         }
 

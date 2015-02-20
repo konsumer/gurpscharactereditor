@@ -124,6 +124,15 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Encumbrance:.
+        /// </summary>
+        public static string CharacterSheetEncumbrance {
+            get {
+                return ResourceManager.GetString("CharacterSheetEncumbrance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Health:.
         /// </summary>
         public static string CharacterSheetHealth {

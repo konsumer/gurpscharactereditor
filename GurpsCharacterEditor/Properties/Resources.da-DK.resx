@@ -138,6 +138,9 @@
   <data name="CharacterSheetDexterity" xml:space="preserve">
     <value>Behændighed:</value>
   </data>
+  <data name="CharacterSheetEncumbrance" xml:space="preserve">
+    <value>Byrde:</value>
+  </data>
   <data name="CharacterSheetHealth" xml:space="preserve">
     <value>Helbred:</value>
   </data>
@@ -236,6 +239,9 @@
   </data>
   <data name="EditSkillWindowOk" xml:space="preserve">
     <value>OK</value>
+  </data>
+  <data name="Encumbrance" xml:space="preserve">
+    <value>Byrde</value>
   </data>
   <data name="MenuAddAdvantage" xml:space="preserve">
     <value>Tilføj fordel/ulempe</value>
