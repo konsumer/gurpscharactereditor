@@ -138,6 +138,9 @@
   <data name="CharacterSheetDexterity" xml:space="preserve">
     <value>Dexterity:</value>
   </data>
+  <data name="CharacterSheetDodge" xml:space="preserve">
+    <value>Dodge:</value>
+  </data>
   <data name="CharacterSheetEncumbrance" xml:space="preserve">
     <value>Encumbrance:</value>
   </data>

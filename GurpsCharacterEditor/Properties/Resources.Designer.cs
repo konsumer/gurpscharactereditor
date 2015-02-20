@@ -124,6 +124,15 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dodge:.
+        /// </summary>
+        public static string CharacterSheetDodge {
+            get {
+                return ResourceManager.GetString("CharacterSheetDodge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Encumbrance:.
         /// </summary>
         public static string CharacterSheetEncumbrance {

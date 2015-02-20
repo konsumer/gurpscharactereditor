@@ -138,6 +138,9 @@
   <data name="CharacterSheetDexterity" xml:space="preserve">
     <value>Behændighed:</value>
   </data>
+  <data name="CharacterSheetDodge" xml:space="preserve">
+    <value>Undvigelse:</value>
+  </data>
   <data name="CharacterSheetEncumbrance" xml:space="preserve">
     <value>Byrde:</value>
   </data>
