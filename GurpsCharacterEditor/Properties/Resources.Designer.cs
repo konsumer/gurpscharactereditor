@@ -448,6 +448,51 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Extra-heavy encumbrance.
+        /// </summary>
+        public static string EncumbranceExtraHeavy {
+            get {
+                return ResourceManager.GetString("EncumbranceExtraHeavy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heavy encumbrance.
+        /// </summary>
+        public static string EncumbranceHeavy {
+            get {
+                return ResourceManager.GetString("EncumbranceHeavy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Light encumbrance.
+        /// </summary>
+        public static string EncumbranceLight {
+            get {
+                return ResourceManager.GetString("EncumbranceLight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Medium encumbrance.
+        /// </summary>
+        public static string EncumbranceMedium {
+            get {
+                return ResourceManager.GetString("EncumbranceMedium", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No encumbrance.
+        /// </summary>
+        public static string EncumbranceNo {
+            get {
+                return ResourceManager.GetString("EncumbranceNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add advantage/disadvantage.
         /// </summary>
         public static string MenuAddAdvantage {

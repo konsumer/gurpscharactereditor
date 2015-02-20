@@ -246,6 +246,21 @@
   <data name="EditSkillWindowOk" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="EncumbranceExtraHeavy" xml:space="preserve">
+    <value>Extra-heavy encumbrance</value>
+  </data>
+  <data name="EncumbranceHeavy" xml:space="preserve">
+    <value>Heavy encumbrance</value>
+  </data>
+  <data name="EncumbranceLight" xml:space="preserve">
+    <value>Light encumbrance</value>
+  </data>
+  <data name="EncumbranceMedium" xml:space="preserve">
+    <value>Medium encumbrance</value>
+  </data>
+  <data name="EncumbranceNo" xml:space="preserve">
+    <value>No encumbrance</value>
+  </data>
   <data name="MenuAddAdvantage" xml:space="preserve">
     <value>Add advantage/disadvantage</value>
   </data>

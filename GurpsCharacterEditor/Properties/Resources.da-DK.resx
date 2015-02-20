@@ -249,6 +249,21 @@
   <data name="Encumbrance" xml:space="preserve">
     <value>Byrde</value>
   </data>
+  <data name="EncumbranceExtraHeavy" xml:space="preserve">
+    <value>Ekstra tung byrde</value>
+  </data>
+  <data name="EncumbranceHeavy" xml:space="preserve">
+    <value>Tung byrde</value>
+  </data>
+  <data name="EncumbranceLight" xml:space="preserve">
+    <value>Let byrde</value>
+  </data>
+  <data name="EncumbranceMedium" xml:space="preserve">
+    <value>Middel byrde</value>
+  </data>
+  <data name="EncumbranceNo" xml:space="preserve">
+    <value>Ingen byrde</value>
+  </data>
   <data name="MenuAddAdvantage" xml:space="preserve">
     <value>Tilføj fordel/ulempe</value>
   </data>

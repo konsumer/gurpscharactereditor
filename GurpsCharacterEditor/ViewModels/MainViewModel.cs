@@ -65,7 +65,7 @@ namespace GurpsCharacterEditor.ViewModels
             PropertyDependencyMap.Add("Inventory", new[] { "Encumbrance" });
             PropertyDependencyMap.Add("Advantages", new[] { "CharacterPoints" });
             PropertyDependencyMap.Add("Skills", new[] { "CharacterPoints" });
-            PropertyDependencyMap.Add("Encumbrance", new[] { "Move", "Dodge" });
+            PropertyDependencyMap.Add("Encumbrance", new[] { "EncumbranceAsInt", "EncumbranceAsString", "Move", "Dodge" });
         }
 
         public string Name
@@ -217,13 +217,34 @@ namespace GurpsCharacterEditor.ViewModels
                 return Character.CharacterPoints;
             }
         }
-        public string Encumbrance
+        public int? EncumbranceAsInt
+        {
+            get
+            {
+                return Character.Encumbrance;
+            }
+        }
+        public string EncumbranceAsString
         {
             get
             {
                 if (Character.Encumbrance.HasValue)
                 {
-                    return Character.Encumbrance.ToString();
+                    switch ((int)Character.Encumbrance)
+                    {
+                        case 0:
+                            return Resources.EncumbranceNo;
+                        case 1:
+                            return Resources.EncumbranceLight;
+                        case 2:
+                            return Resources.EncumbranceMedium;
+                        case 3:
+                            return Resources.EncumbranceHeavy;
+                        case 4:
+                            return Resources.EncumbranceExtraHeavy;
+                        default:
+                            return "N/A";
+                    }
                 }
                 else
                 {
