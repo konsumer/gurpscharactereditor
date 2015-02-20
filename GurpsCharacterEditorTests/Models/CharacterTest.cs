@@ -108,6 +108,31 @@ namespace GurpsEditorTests.Models
         }
 
         [TestMethod]
+        public void CharacterDodge()
+        {
+            Character target = new Character();
+
+            Assert.AreEqual(8, target.Dodge);
+            target.DexterityPoints = 2; // Increase basic speed to 5.5
+            Assert.AreEqual(8, target.Dodge);
+            target.Inventory.Add(new Item("Item", 0, 30)); // Increase encumbrance to 1
+            Assert.AreEqual(7, target.Dodge);
+        }
+
+        [TestMethod]
+        public void CharacterDodgeNotNegative()
+        {
+            Character target = new Character();
+
+            target.BasicSpeedPoints = -7;
+            Assert.AreEqual(1, target.Dodge);
+            target.Inventory.Add(new Item("Item 1", 0, 25));
+            Assert.AreEqual(1, target.Dodge);
+            target.Inventory.Add(new Item("Item 2", 0, 20));
+            Assert.AreEqual(1, target.Dodge);
+        }
+
+        [TestMethod]
         public void CharacterMoveNotNegative()
         {
             Character target = new Character();

@@ -118,6 +118,16 @@ namespace GurpsCharacterEditor.Models
                     return 0;
             }
         }
+        public int Dodge
+        {
+            get
+            {
+                if (Encumbrance.HasValue)
+                    return Math.Max((int)Math.Floor(BasicSpeed + 3) - (int)Encumbrance, 1);
+                else
+                    return 0;
+            }
+        }
 
         // Inventory of the character.
         private ObservableCollection<Item> inventory = new ObservableCollection<Item>();
