@@ -208,7 +208,8 @@ namespace GurpsCharacterEditor.ViewModels
             EditItemWindow window = new EditItemWindow();
             window.DataContext = new Item();
 
-            if ((bool)window.ShowDialog())
+            bool? result = window.ShowDialog();
+            if (result.HasValue && (result == true))
             {
                 Character.Inventory.Add((Item)window.DataContext);
 
@@ -221,7 +222,8 @@ namespace GurpsCharacterEditor.ViewModels
             EditAdvantageWindow window = new EditAdvantageWindow();
             window.DataContext = new Advantage();
 
-            if ((bool)window.ShowDialog())
+            bool? result = window.ShowDialog();
+            if (result.HasValue && (result == true))
             {
                 Character.Advantages.Add((Advantage)window.DataContext);
 
@@ -234,7 +236,8 @@ namespace GurpsCharacterEditor.ViewModels
             EditSkillWindow window = new EditSkillWindow();
             window.DataContext = new Skill();
 
-            if ((bool)window.ShowDialog())
+            bool? result = window.ShowDialog();
+            if (result.HasValue && (result == true))
             {
                 Character.Skills.Add((Skill)window.DataContext);
 
@@ -290,7 +293,8 @@ namespace GurpsCharacterEditor.ViewModels
             dialog.DefaultExt = ".gurps";
             dialog.CheckFileExists = true;
             dialog.Filter = "GURPS files|*.gurps";
-            if (dialog.ShowDialog() == true)
+            bool? result = dialog.ShowDialog();
+            if (result.HasValue && (result == true))
             {
                 // Deserialize the file
                 FileStream stream = File.OpenRead(dialog.FileName);
@@ -317,7 +321,8 @@ namespace GurpsCharacterEditor.ViewModels
             dialog.OverwritePrompt = true;
             dialog.CheckPathExists = true;
             dialog.Filter = "GURPS files|*.gurps";
-            if (dialog.ShowDialog() == true)
+            bool? result = dialog.ShowDialog();
+            if (result.HasValue && (result == true))
             {
                 // Serialize the models
                 FileStream stream = File.OpenWrite(dialog.FileName);
