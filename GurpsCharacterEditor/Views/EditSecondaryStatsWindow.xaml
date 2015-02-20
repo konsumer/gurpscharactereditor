@@ -40,8 +40,9 @@
                 <TextBox Text="{Binding Path=BasicMovePoints, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
         </Grid>
-        <StackPanel Margin=" 8 0 8 8">
-            <Button Content="{x:Static p:Resources.SecondaryStatsWindowOk}" Click="Button_Click" />
+        <StackPanel Margin=" 8 0 8 8" Orientation="Horizontal">
+            <Button Content="{x:Static p:Resources.SecondaryStatsWindowOk}" Click="OkButtonClick" />
+            <Button Margin=" 8 0 0 0" Content="{x:Static p:Resources.SecondaryStatsWindowCancel}" Click="CancelButtonClick" />
         </StackPanel>
     </StackPanel>
 </Window>

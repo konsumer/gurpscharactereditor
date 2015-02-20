@@ -245,9 +245,9 @@ namespace GurpsCharacterEditor.ViewModels
         public void EditPrimaryStats(object parameter)
         {
             EditPrimaryStatsWindow window = new EditPrimaryStatsWindow();
-            Character copy = (Character)Character.Copy();
             window.DataContext = new EditPrimaryStatsViewModel(Character);
 
+            Character copy = (Character)Character.Copy();
             bool? result = window.ShowDialog();
             if (result.HasValue && (result == true))
             {
@@ -267,14 +267,21 @@ namespace GurpsCharacterEditor.ViewModels
             EditSecondaryStatsWindow window = new EditSecondaryStatsWindow();
             window.DataContext = new EditSecondaryStatsViewModel(Character);
 
-            window.ShowDialog();
-
-            NotifyPropertyChanged("MaxHPPoints");
-            NotifyPropertyChanged("MaxFPPoints");
-            NotifyPropertyChanged("WillpowerPoints");
-            NotifyPropertyChanged("PerceptionPoints");
-            NotifyPropertyChanged("BasicSpeedPoints");
-            NotifyPropertyChanged("BasicMovePoints");
+            Character copy = (Character)Character.Copy();
+            bool? result = window.ShowDialog();
+            if (result.HasValue && (result == true))
+            {
+                NotifyPropertyChanged("MaxHPPoints");
+                NotifyPropertyChanged("MaxFPPoints");
+                NotifyPropertyChanged("WillpowerPoints");
+                NotifyPropertyChanged("PerceptionPoints");
+                NotifyPropertyChanged("BasicSpeedPoints");
+                NotifyPropertyChanged("BasicMovePoints");
+            }
+            else
+            {
+                Character = copy;
+            }
         }
 
         public void Open(object parameter)
@@ -310,7 +317,8 @@ namespace GurpsCharacterEditor.ViewModels
             dialog.OverwritePrompt = true;
             dialog.CheckPathExists = true;
             dialog.Filter = "GURPS files|*.gurps";
-            if (dialog.ShowDialog() == true) {
+            if (dialog.ShowDialog() == true)
+            {
                 // Serialize the models
                 FileStream stream = File.OpenWrite(dialog.FileName);
                 XmlSerializer serializer = new XmlSerializer(Character.GetType());

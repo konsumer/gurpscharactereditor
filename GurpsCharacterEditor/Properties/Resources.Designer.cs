@@ -601,6 +601,15 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string SecondaryStatsWindowCancel {
+            get {
+                return ResourceManager.GetString("SecondaryStatsWindowCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to OK.
         /// </summary>
         public static string SecondaryStatsWindowOk {

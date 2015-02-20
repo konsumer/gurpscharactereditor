@@ -297,6 +297,9 @@
   <data name="SecondaryStatsWindow" xml:space="preserve">
     <value>Rediger sekundære statistikker</value>
   </data>
+  <data name="SecondaryStatsWindowCancel" xml:space="preserve">
+    <value>Annuller</value>
+  </data>
   <data name="SecondaryStatsWindowOk" xml:space="preserve">
     <value>OK</value>
   </data>
