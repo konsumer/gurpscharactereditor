@@ -232,6 +232,15 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Thrust damage:.
+        /// </summary>
+        public static string CharacterSheetThrustDamage {
+            get {
+                return ResourceManager.GetString("CharacterSheetThrustDamage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Character points:.
         /// </summary>
         public static string CharacterSheetTotalPoints {

@@ -46,7 +46,7 @@ namespace GurpsCharacterEditor.ViewModels
             SaveAsCommand = new DelegateCommand(SaveAs);
 
             // Setup property dependencies
-            PropertyDependencyMap.Add("Strength", new[] { "MaxHP", "BasicLift" });
+            PropertyDependencyMap.Add("Strength", new[] { "MaxHP", "BasicLift", "ThrustDamage" });
             PropertyDependencyMap.Add("StrengthPoints", new[] { "Strength", "CharacterPoints" });
             PropertyDependencyMap.Add("Dexterity", new[] { "BasicSpeed" });
             PropertyDependencyMap.Add("DexterityPoints", new[] { "Dexterity", "CharacterPoints" });
@@ -167,6 +167,13 @@ namespace GurpsCharacterEditor.ViewModels
             get
             {
                 return Character.Dodge;
+            }
+        }
+        public Dice ThrustDamage
+        {
+            get
+            {
+                return Character.ThrustDamage;
             }
         }
 

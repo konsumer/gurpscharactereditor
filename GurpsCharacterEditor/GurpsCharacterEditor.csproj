@@ -122,6 +122,7 @@
     <Compile Include="Models\Advantage.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\Damage.cs" />
+    <Compile Include="Models\Dice.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\MeleeWeapon.cs" />
     <Compile Include="Models\RangedWeapon.cs" />
