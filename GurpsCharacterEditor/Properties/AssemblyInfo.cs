@@ -10,7 +10,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("GURPS Editor")]
-[assembly: AssemblyCopyright("Copyright © Claus Jensby Madsen 2013")]
+[assembly: AssemblyCopyright("Copyright © Claus Jensby Madsen 2013-2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
