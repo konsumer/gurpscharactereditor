@@ -199,6 +199,11 @@ namespace GurpsCharacterEditor.Models
         public Character()
         {
         }
+
+        public Character Copy() {
+            return (Character)this.MemberwiseClone();
+        }
+
         public override string ToString()
         {
             return Name;
