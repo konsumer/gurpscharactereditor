@@ -115,6 +115,10 @@
                                 <TextBlock Text="{x:Static p:Resources.CharacterSheetThrustDamage}"/>
                                 <TextBlock Text="{Binding Path=ThrustDamage}" Style="{StaticResource Stat}"/>
                             </StackPanel>
+                            <StackPanel Margin="8 0 0 0" Orientation="Vertical">
+                                <TextBlock Text="{x:Static p:Resources.CharacterSheetSwingDamage}"/>
+                                <TextBlock Text="{Binding Path=SwingDamage}" Style="{StaticResource Stat}"/>
+                            </StackPanel>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>

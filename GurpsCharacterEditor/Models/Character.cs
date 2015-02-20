@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace GurpsCharacterEditor.Models
 {
@@ -178,7 +179,111 @@ namespace GurpsCharacterEditor.Models
                         case 12: return new Dice(11, 0);
                     }
                 }
-                return new Dice(11 + (str - 100) / 10, 6);
+                Debug.Assert(str > 100);
+                return new Dice(11 + (str - 100) / 10);
+            }
+        }
+        public Dice SwingDamage
+        {
+            get
+            {
+                int str = Strength;
+                if (str <= 40)
+                {
+                    switch (str)
+                    {
+                        case 1:
+                        case 2:
+                            return new Dice(1, -5);
+                        case 3: 
+                        case 4:
+                            return new Dice(1, -4);
+                        case 5:
+                        case 6:
+                            return new Dice(1, -3);
+                        case 7:
+                        case 8:
+                            return new Dice(1, -2);
+                        case 9:
+                            return new Dice(1, -1);
+                        case 10:
+                            return new Dice(1, 0);
+                        case 11:
+                            return new Dice(1, 1);
+                        case 12: 
+                            return new Dice(1, 2);
+                        case 13: 
+                            return new Dice(2, -1);
+                        case 14: 
+                            return new Dice(2, 0);
+                        case 15: 
+                            return new Dice(2, 1);
+                        case 16: 
+                            return new Dice(2, 2);
+                        case 17: 
+                            return new Dice(3, -1);
+                        case 18: 
+                            return new Dice(3, 0);
+                        case 19:
+                            return new Dice(3, 1);
+                        case 20: 
+                            return new Dice(3, 2);
+                        case 21: 
+                            return new Dice(4, -1);
+                        case 22:
+                            return new Dice(4, 0);
+                        case 23:
+                            return new Dice(4, 1);
+                        case 24: 
+                            return new Dice(4, 2);
+                        case 25: 
+                            return new Dice(5, -1);
+                        case 26: 
+                            return new Dice(5, 0);
+                        case 27:
+                        case 28:
+                            return new Dice(5, 1);
+                        case 29:
+                        case 30:
+                            return new Dice(5, 2);
+                        case 31:
+                        case 32:
+                            return new Dice(6, -1);
+                        case 33:
+                        case 34:
+                            return new Dice(6, 0);
+                        case 35:
+                        case 36:
+                            return new Dice(6, 1);
+                        case 37:
+                        case 38:
+                            return new Dice(6, 2);
+                        case 39:
+                        case 40:
+                            return new Dice(7, -1);
+                    }
+                }
+                if (str <= 100)
+                {
+                    switch ((str - 40) / 5)
+                    {
+                        case 0: return new Dice(7, -1);
+                        case 1: return new Dice(7, 1);
+                        case 2: return new Dice(8, -1);
+                        case 3: return new Dice(8, 1);
+                        case 4: return new Dice(9, 0);
+                        case 5: return new Dice(9, 2);
+                        case 6: return new Dice(10, 0);
+                        case 7: return new Dice(10, 2);
+                        case 8: return new Dice(11, 0);
+                        case 9: return new Dice(11, 2);
+                        case 10: return new Dice(12, 0);
+                        case 11: return new Dice(12, 2);
+                        case 12: return new Dice(13, 0);
+                    }
+                }
+                Debug.Assert(str > 100);
+                return new Dice(13 + (str - 100) / 10);
             }
         }
 
