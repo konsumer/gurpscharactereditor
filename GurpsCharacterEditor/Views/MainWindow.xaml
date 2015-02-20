@@ -102,6 +102,12 @@
                                 <TextBlock Text="{Binding Path=Encumbrance}" />
                             </StackPanel>
                         </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel Margin="8 0 0 0" Orientation="Vertical">
+                                <TextBlock Text="{x:Static p:Resources.CharacterSheetMove}"/>
+                                <TextBlock Text="{Binding Path=Move}" Style="{StaticResource Stat}"/>
+                            </StackPanel>
+                        </StackPanel>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">

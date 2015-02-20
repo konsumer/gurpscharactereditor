@@ -156,6 +156,9 @@
   <data name="CharacterSheetMaxHP" xml:space="preserve">
     <value>Maks. HP:</value>
   </data>
+  <data name="CharacterSheetMove" xml:space="preserve">
+    <value>Bevægelse:</value>
+  </data>
   <data name="CharacterSheetNoPicture" xml:space="preserve">
     <value>Intet billede</value>
   </data>

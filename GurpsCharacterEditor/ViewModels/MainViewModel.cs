@@ -61,6 +61,7 @@ namespace GurpsCharacterEditor.ViewModels
             PropertyDependencyMap.Add("Inventory", new[] { "Encumbrance" });
             PropertyDependencyMap.Add("Advantages", new[] { "CharacterPoints" });
             PropertyDependencyMap.Add("Skills", new[] { "CharacterPoints" });
+            PropertyDependencyMap.Add("Encumbrance", new[] { "Move" });
         }
 
         public string Name
@@ -148,6 +149,13 @@ namespace GurpsCharacterEditor.ViewModels
             get
             {
                 return Character.BasicMove;
+            }
+        }
+        public int Move
+        {
+            get
+            {
+                return Character.Move;
             }
         }
 

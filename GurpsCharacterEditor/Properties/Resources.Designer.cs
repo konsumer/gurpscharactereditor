@@ -178,6 +178,15 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Move:.
+        /// </summary>
+        public static string CharacterSheetMove {
+            get {
+                return ResourceManager.GetString("CharacterSheetMove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No picture.
         /// </summary>
         public static string CharacterSheetNoPicture {
