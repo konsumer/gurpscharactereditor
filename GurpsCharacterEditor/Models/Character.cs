@@ -108,6 +108,16 @@ namespace GurpsCharacterEditor.Models
                 return bm + BasicMovePoints;
             }
         }
+        public int Move
+        {
+            get
+            {
+                if (Encumbrance.HasValue)
+                    return Math.Max(BasicMove - (int)Encumbrance, 1);
+                else
+                    return 0;
+            }
+        }
 
         // Inventory of the character.
         private ObservableCollection<Item> inventory = new ObservableCollection<Item>();

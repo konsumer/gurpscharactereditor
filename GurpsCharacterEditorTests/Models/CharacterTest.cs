@@ -91,6 +91,41 @@ namespace GurpsEditorTests.Models
         }
 
         [TestMethod]
+        public void CharacterMove()
+        {
+            Character target = new Character();
+
+            Item item1 = new Item("Item 1", 0, 15);
+            Item item2 = new Item("Item 2", 0, 20);
+            Item item3 = new Item("Item 3", 0, 20);
+
+            target.Inventory.Add(item1);
+            Assert.AreEqual(5, target.Move);
+            target.Inventory.Add(item2);
+            Assert.AreEqual(4, target.Move);
+            target.Inventory.Add(item3);
+            Assert.AreEqual(3, target.Move);
+        }
+
+        [TestMethod]
+        public void CharacterMoveNotNegative()
+        {
+            Character target = new Character();
+            target.BasicMovePoints = -4;
+
+            Item item1 = new Item("Item 1", 0, 15);
+            Item item2 = new Item("Item 2", 0, 20);
+            Item item3 = new Item("Item 3", 0, 20);
+
+            target.Inventory.Add(item1);
+            Assert.AreEqual(1, target.Move);
+            target.Inventory.Add(item2);
+            Assert.AreEqual(1, target.Move);
+            target.Inventory.Add(item3);
+            Assert.AreEqual(1, target.Move);
+        }
+
+        [TestMethod]
         public void CharacterTotalWeight()
         {
             Character target = new Character();
