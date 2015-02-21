@@ -1,4 +1,6 @@
-﻿namespace GurpsCharacterEditor.Models
+﻿using System.Collections.Generic;
+
+namespace GurpsCharacterEditor.Models
 {
     // This item represents an inventory item, which can be carried by a
     // character.
@@ -10,6 +12,8 @@
         public string Description { get; set; }
         public int Value { get; set; }
         public int Weight { get; set; }
+
+        public List<AttackOption> AttackOptions { get; set; }
 
         public Item()
         {

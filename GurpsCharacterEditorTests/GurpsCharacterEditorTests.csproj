@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\AdvantageTest.cs" />
-    <Compile Include="Models\DamageTest.cs" />
     <Compile Include="Models\DiceTest.cs" />
     <Compile Include="Models\ItemTest.cs" />
     <Compile Include="Models\SkillTest.cs" />
