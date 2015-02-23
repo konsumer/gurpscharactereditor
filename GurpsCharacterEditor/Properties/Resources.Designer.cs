@@ -610,6 +610,15 @@ namespace GurpsCharacterEditor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New.
+        /// </summary>
+        public static string RibbonAppMenuItemNew {
+            get {
+                return ResourceManager.GetString("RibbonAppMenuItemNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Open.
         /// </summary>
         public static string RibbonAppMenuItemOpen {

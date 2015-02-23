@@ -300,6 +300,9 @@
   <data name="RibbonAppMenuItemAbout" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="RibbonAppMenuItemNew" xml:space="preserve">
+    <value>New</value>
+  </data>
   <data name="RibbonAppMenuItemOpen" xml:space="preserve">
     <value>Open</value>
   </data>

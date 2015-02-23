@@ -22,6 +22,7 @@ namespace GurpsCharacterEditor.ViewModels
         public DelegateCommand AddItemCommand { get; private set; }
         public DelegateCommand AddAdvantageCommand { get; private set; }
         public DelegateCommand AddSkillCommand { get; private set; }
+        public DelegateCommand NewCommand { get; private set; }
         public DelegateCommand OpenCommand { get; private set; }
         public DelegateCommand SaveAsCommand { get; private set; }
 
@@ -42,6 +43,7 @@ namespace GurpsCharacterEditor.ViewModels
             AddItemCommand = new DelegateCommand(AddItem);
             AddAdvantageCommand = new DelegateCommand(AddAdvantage);
             AddSkillCommand = new DelegateCommand(AddSkill);
+            NewCommand = new DelegateCommand(New);
             OpenCommand = new DelegateCommand(Open);
             SaveAsCommand = new DelegateCommand(SaveAs);
 
@@ -361,6 +363,14 @@ namespace GurpsCharacterEditor.ViewModels
             {
                 Character = copy;
             }
+        }
+
+        public void New(object parameter)
+        {
+            Character = new Character();
+
+            // Notify all properties changed
+            NotifyPropertyChanged(string.Empty);
         }
 
         public void Open(object parameter)
